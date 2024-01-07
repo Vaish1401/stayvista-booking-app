@@ -22,7 +22,29 @@ const Header = () => {
   const [date, setDate] = useState(false);
   const [man, setMan] = useState(false);
 
+  const [room, setRoom] = useState(1);
+  const [children, setChildren] = useState(0);
+  const [adult, setAdult] = useState(1);
+
   // const [isShow, setIsShow] = useState(false);
+
+  const handleRoomIncrement = () => {
+    if (room > 1) {
+      setRoom(room - 1);
+    }
+  };
+
+  const handleChildrenIncrement = () => {
+    if (children > 0) {
+      setChildren(children - 1);
+    }
+  };
+
+  const handleAdultIncrement = () => {
+    if (adult > 1) {
+      setAdult(adult - 1);
+    }
+  };
   return (
     <header className="header-section">
       <Container>
@@ -160,7 +182,7 @@ const Header = () => {
         {/* mobile menu li end */}
       </Container>
       <Container>
-        <div className="search__inputs">
+        <div className="search__inputs" onClick={() => setMan(!man)}>
           <div className="search__inputs--form">
             <IoBedOutline />
             <input
@@ -175,50 +197,81 @@ const Header = () => {
           </div>
           <div className="search__inputs--form">
             <FiUser />
-            <span>2 adults · 0 children · 1 room</span>
+            <span>
+              {adult} adults · {children} children · {room} room
+            </span>
             <IoIosArrowDown />
           </div>
           <div className="search__inputs--form">
             <button>Search</button>
           </div>
         </div>
-        <div className="peoples">
-          <div className="people__container">
-            <div className="people">
-              <p>Adults</p>
-              <div className="people__buttons">
-                <button className="people__button incre"> -</button>
-                <span>1</span>
-                <button className="people__button decre">+</button>
+        {man && (
+          <div className="peoples">
+            <div className="people__container">
+              <div className="people">
+                <p>Adults</p>
+                <div className="people__buttons">
+                  <button
+                    onClick={handleAdultIncrement}
+                    className="people__button incre"
+                  >
+                    -
+                  </button>
+                  <span>{adult}</span>
+                  <button
+                    onClick={() => setAdult(adult + 1)}
+                    className="people__button decre"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div className="people">
+                <p>Children</p>
+                <div className="people__buttons">
+                  <button
+                    onClick={handleChildrenIncrement}
+                    className="people__button incre"
+                  >
+                    -
+                  </button>
+                  <span>{children}</span>
+                  <button
+                    onClick={() => setChildren(children + 1)}
+                    className="people__button decre"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div className="people">
+                <p>Rooms</p>
+                <div className="people__buttons">
+                  <button
+                    onClick={handleRoomIncrement}
+                    className="people__button incre"
+                  >
+                    -
+                  </button>
+                  <span>{room}</span>
+                  <button
+                    onClick={() => setRoom(room + 1)}
+                    className="people__button decre"
+                  >
+                    +
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="people">
-              <p>Adults</p>
-              <div className="people__buttons">
-                <button className="people__button incre"> -</button>
-                <span>1</span>
-                <button className="people__button decre">+</button>
-              </div>
-            </div>
-            <div className="people">
-              <p>Adults</p>
-              <div className="people__buttons">
-                <button className="people__button incre"> -</button>
-                <span>1</span>
-                <button className="people__button decre">+</button>
-              </div>
-            </div>
+            <button
+              onClick={() => setMan(false)}
+              className="people__button--done"
+            >
+              Done
+            </button>
           </div>
-          <button className="people__button--done">Done</button>
-          {/* {location && (
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
-              iure eligendi ipsum placeat maiores maxime doloremque sit dolor,
-              neque sed ratione et aspernatur. Veniam earum, aspernatur mollitia
-              nam at odio.
-            </p>
-          )} */}
-        </div>
+        )}
       </Container>
     </header>
   );

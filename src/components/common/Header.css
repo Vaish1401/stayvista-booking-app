@@ -244,13 +244,19 @@ ul.header__links.users li a {
 
 .peoples {
   width: 320px;
-  height: 220px;
+  height: 180px;
   color: black;
   box-shadow: 0 2px 16px 0 rgba(26, 26, 26, 0.24);
   position: absolute;
   transform: translate(630px, 50px);
   border-radius: 10px;
   padding: 30px;
+}
+
+.people__container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .people {
@@ -266,7 +272,28 @@ ul.header__links.users li a {
   padding: 7px 0;
   border-radius: 10px;
   transition: all 0.5s;
+  margin-top: 1rem;
   &:hover {
     background-color: #f1eeee;
+  }
+}
+
+.people__buttons {
+  border: 1px solid #787575;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 115px;
+  height: 35px;
+}
+
+.people__button {
+  padding: 7px 10px;
+  transition: all 0.5s;
+  color: var(--border-color);
+  &:hover {
+    background-color: #0077ff3b;
   }
 }
