@@ -59,9 +59,10 @@ ul.header__links.users li a {
   gap: 5px;
 }
 
-.header__link {
+.header__link,
+.header__nav--service {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -93,12 +94,18 @@ ul.header__links.users li a {
 }
 
 .header__nav--service {
-  background-color: var(--hover-color);
   display: flex;
   align-items: center;
   border-radius: 30px;
-  padding: 10px 15px;
-  gap: 8px;
+  padding: 8px 12px;
+  gap: 6px;
+  &:hover {
+    background-color: var(--hover-color);
+  }
+}
+
+.header__nav--services .active {
+  background-color: var(--hover-color);
   border: 1px solid var(--parimary-secondary);
 }
 
@@ -166,5 +173,100 @@ ul.header__links.users li a {
     display: flex;
     align-items: center;
     gap: 6px;
+  }
+}
+
+/*   */
+
+.search__inputs {
+  height: 55px;
+  border-radius: 5px;
+  background-color: #ffb700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  transform: translate(0, 45px);
+}
+
+.search__inputs--form {
+  background: #fff;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  height: 37px;
+  border-radius: 5px;
+  gap: 8px;
+  padding: 10px;
+}
+
+.search__inputs--form span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.search__inputs--form svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: #474747;
+}
+
+.search__inputs--form input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.search__inputs--form input[type="text"] {
+  width: 100%;
+}
+
+.search__inputs--form:nth-child(1),
+.search__inputs--form:nth-child(2),
+.search__inputs--form:nth-child(3) {
+  width: 290px;
+}
+
+.search__inputs--form button {
+  background-color: transparent;
+}
+
+.search__inputs--form:last-child {
+  background-color: #0079ff;
+  padding: 9px 24px;
+  transition: all 0.4s;
+  color: var(--parimary-secondary);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--primary-color);
+  }
+}
+
+.peoples {
+  width: 320px;
+  height: 220px;
+  color: black;
+  box-shadow: 0 2px 16px 0 rgba(26, 26, 26, 0.24);
+  position: absolute;
+  transform: translate(630px, 50px);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.people {
+  display: flex;
+  justify-content: space-between;
+}
+
+.people__button--done {
+  width: 100%;
+  color: var(--border-color);
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  padding: 7px 0;
+  border-radius: 10px;
+  transition: all 0.5s;
+  &:hover {
+    background-color: #f1eeee;
   }
 }
