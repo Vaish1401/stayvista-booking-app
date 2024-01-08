@@ -232,7 +232,7 @@ ul.header__links.users li a {
 }
 
 .search__inputs--form:last-child {
-  background-color: #0079ff;
+  background-color: var(--border-color);
   padding: 9px 24px;
   transition: all 0.4s;
   color: var(--parimary-secondary);
@@ -296,4 +296,12 @@ ul.header__links.users li a {
   &:hover {
     background-color: #0077ff3b;
   }
+}
+
+/* date range calculator */
+
+.rdrCalendarWrapper.rdrDateRangeWrapper {
+  box-shadow: 0 2px 16px 0 rgba(26, 26, 26, 0.24);
+  transform: translate(280px, 50px);
+  position: absolute;
 }
