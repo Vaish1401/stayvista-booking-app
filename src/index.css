@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  color: var(--parimary-secondary);
+  /* color: var(--parimary-secondary); */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
