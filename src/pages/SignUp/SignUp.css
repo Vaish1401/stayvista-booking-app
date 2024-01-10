@@ -8,6 +8,7 @@
     0 8px 16px rgba(200, 200, 200, 0.1); */
   border: 2px solid var(--border-color);
   border-radius: 10px;
+  margin-top: 1.5rem;
 }
 
 .account-title {
@@ -45,11 +46,18 @@ input[type="password"],
   box-sizing: border-box;
 }
 
+.signUp__button,
+.signIn__button {
+  color: var(--border-color);
+  border-color: var(--hover-color);
+  transition: all 0.4s;
+}
+
 .signUp__button:hover,
 .signIn__button:hover {
-  background-color: var(--parimary-secondary);
+  background-color: var(--hover-color) !important;
   border-color: var(--hover-color);
-  color: var(--border-color) !important;
+  color: var(--parimary-secondary);
 }
 
 input[type="text"]:focus,

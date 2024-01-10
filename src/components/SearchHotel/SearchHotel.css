@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  transform: translate(0, 45px);
+  /* transform: translate(0, 45px); */
 }
 
 .search__inputs--form {
@@ -46,7 +46,7 @@
 .search__inputs--form:nth-child(1),
 .search__inputs--form:nth-child(2),
 .search__inputs--form:nth-child(3) {
-  width: 290px;
+  width: 332px;
 }
 
 .search__inputs--form button {
@@ -70,9 +70,10 @@
   color: black;
   box-shadow: 0 2px 16px 0 rgba(26, 26, 26, 0.24);
   position: absolute;
-  transform: translate(630px, 50px);
+  transform: translate(630px, 5px);
   border-radius: 10px;
   padding: 30px;
+  background-color: var(--parimary-secondary);
 }
 
 .people__container {
@@ -115,6 +116,7 @@
   padding: 7px 10px;
   transition: all 0.5s;
   color: var(--border-color);
+  background-color: #0077ff22;
   &:hover {
     background-color: #0077ff3b;
   }
@@ -124,6 +126,7 @@
 
 .rdrCalendarWrapper.rdrDateRangeWrapper {
   box-shadow: 0 2px 16px 0 rgba(26, 26, 26, 0.24);
-  transform: translate(280px, 50px);
+  transform: translate(280px, 5px);
+  border-radius: 10px;
   position: absolute;
 }

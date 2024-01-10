@@ -49,8 +49,11 @@ button {
   border: none;
   outline: none;
   text-decoration: none;
-  background-color: inherit;
   cursor: pointer;
+}
+
+button {
+  background-color: transparent !important;
 }
 
 li {

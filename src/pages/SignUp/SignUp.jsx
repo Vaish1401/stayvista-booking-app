@@ -4,6 +4,7 @@ import { TbEye } from "react-icons/tb";
 import Container from "../../components/common/Container";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 import "./SignUp.css";
 import { SignInDefault } from "../../components/common/SignInDefault";
@@ -17,8 +18,10 @@ const SignUp = () => {
 
   const [passShow, setPassShow] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    await axios
+      .post("http://localhost:8800/api/auth/register", data)
+      .then((res) => console.log("Data sended"));
   };
 
   // const handleSignUp = () => {
@@ -95,7 +98,7 @@ const SignUp = () => {
             <div className="form-group">
               <label htmlFor="name">Name:</label>
               <input
-                {...register("fullName", {
+                {...register("username", {
                   required: true,
                   maxLength: 12,
                   minLength: 3,

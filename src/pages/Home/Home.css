@@ -1,3 +1,36 @@
 .home-section {
-  background-color: var(--primary-color);
+  background-image: linear-gradient(
+      90deg,
+      #1e1e1e -6.88%,
+      rgba(0, 0, 0, 0) 87.45%
+    ),
+    url("https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/bg-banner-home2-01.jpg");
+  background-size: cover;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.home__container {
+  transform: translate(0, 10rem);
+}
+
+.home__content {
+  text-align: center;
+}
+
+.home__section--title,
+.home__section--desc {
+  color: var(--parimary-secondary);
+}
+
+.home__section--title {
+  font-size: 60px;
+  padding: 2rem 0;
+}
+
+.home__section--desc {
+  font-size: 20px;
+  padding-bottom: 1.5rem;
 }
