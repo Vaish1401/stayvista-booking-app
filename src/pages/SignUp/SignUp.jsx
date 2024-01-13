@@ -172,6 +172,7 @@ const SignUp = () => {
                 )}
               </div>
             </div>
+
             <div className="form-group">
               <label htmlFor="confirmPassword">Confirm Password:</label>
               <input
@@ -199,6 +200,34 @@ const SignUp = () => {
                   least one numeric digit, one uppercase and one lowercase
                   letter
                 </p>
+              )}
+            </div>
+            <div className="form-group">
+              <label htmlFor="country">Country:</label>
+              <input
+                {...register("country", {
+                  required: true,
+                  maxLength: 15,
+                  minLength: 2,
+                  pattern: /^[A-Za-z]+$/i,
+                })}
+                type="text"
+              />
+              {errors?.country?.type === "required" && (
+                <p className="signup__error">This field is required</p>
+              )}
+              {errors?.country?.type === "maxLength" && (
+                <p className="signup__error">
+                  country cannot exceed 15 characters
+                </p>
+              )}
+              {errors?.country?.type === "minLength" && (
+                <p className="signup__error">
+                  country cannot exceed less than 2 characters
+                </p>
+              )}
+              {errors?.country?.type === "pattern" && (
+                <p className="signup__error">Alphabetical characters only</p>
               )}
             </div>
             <button className="signUp__button" type="submit">

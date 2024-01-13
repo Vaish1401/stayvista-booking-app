@@ -14,10 +14,16 @@ import { MdAttractions } from "react-icons/md";
 import language from "../../assets/language.png";
 
 import "./Header.css";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Header = () => {
   // const [isShow, setIsShow] = useState(false);
+  const { state, logout } = useContext(AuthContext);
 
+  const handleLogOut = () => {
+    logout();
+  };
   return (
     <header className="header-section">
       <Container>
@@ -64,13 +70,26 @@ const Header = () => {
             <ul className="header__links links--button  ">
               <NavLink className="header__link">List your property</NavLink>
 
-              <NavLink to={"/signup"} className="header__link--button button">
-                Register
-              </NavLink>
-
-              <NavLink to={"/login"} className="header__link--button button">
-                Sign in
-              </NavLink>
+              {state.user ? (
+                <NavLink onClick={handleLogOut} to={"/"}>
+                  LogOut
+                </NavLink>
+              ) : (
+                <>
+                  <NavLink
+                    to={"/signup"}
+                    className="header__link--button button"
+                  >
+                    Register
+                  </NavLink>
+                  <NavLink
+                    to={"/login"}
+                    className="header__link--button button"
+                  >
+                    Sign in
+                  </NavLink>
+                </>
+              )}
             </ul>
           </div>
         </nav>

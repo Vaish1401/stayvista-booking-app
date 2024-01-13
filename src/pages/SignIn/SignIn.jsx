@@ -3,13 +3,15 @@
 import { Link } from "react-router-dom";
 
 import Container from "../../components/common/Container";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import "./SignIn.css";
 import { SignInDefault } from "../../components/common/SignInDefault";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const SignIn = () => {
+  const { login } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -18,75 +20,12 @@ const SignIn = () => {
 
   const [passShow, setPassShow] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (inputData) => {
+    const { email, password } = inputData;
+    login(email, password);
+    console.log(email, password);
   };
 
-  // const handleSignUp = () => {
-  //   //   event.preventDefault();
-  //   //   const form = event.target;
-  //   //   const name = form.fullname.value;
-  //   //   const email = form.email.value;
-  //   //   const password = form.password.value;
-  //   //   const confirm = form.confirmPassword.value;
-  //   //   console.log(name, email, password, confirm);
-  //   //   setError("");
-  //   //   if (name === "" && email === "" && password === "" && confirm === "") {
-  //   //     setError("Complete all fields in the form");
-  //   //     return;
-  //   //   } else if (password !== confirm) {
-  //   //     setError("Your password did not match");
-  //   //     return;
-  //   //   } else if (password.length < 6) {
-  //   //     setError("password must be 6 characters or longer");
-  //   //     return;
-  //   //   }
-  //   //   createUser(email, password)
-  //   //     .then((result) => {
-  //   //       const loggedUser = result.user;
-  //   //       toast.success("Signup successful!", {
-  //   //         toastId: "Rahul Ali",
-  //   //       });
-  //   //       // console.log(loggedUser);
-  //   //       // navigate("/");
-  //   //     })
-  //   //     .catch((error) => {
-  //   //       console.log(error);
-  //   //       setError(error.message);
-  //   //     });
-  //   // };
-  //   // const handleSignInWithGoogle = () => {
-  //   //   signInWithGoogle()
-  //   //     .then((result) => {
-  //   //       const user = result.user;
-  //   //       // console.log(user);
-  //   //       toast.success("Signin successful!", {
-  //   //         toastId: "Rahul Ali",
-  //   //       });
-  //   //       navigate("/");
-  //   //     })
-  //   //     .catch((error) => {
-  //   //       console.log(error.message);
-  //   //       setError(error.message);
-  //   //     });
-  // };
-
-  // const handleSignInWithGithub = () => {
-  //   signInWithGithub()
-  //     .then((result) => {
-  //       console.log(result.user);
-  //       toast.success("Signin successful!", {
-  //         toastId: "Rahul Ali",
-  //       });
-  //       // toast("login Successfull");
-  //       navigate("/");
-  //     })
-  //     .catch((error) => {
-  //       const errorCode = error.code;
-  //       console.log(errorCode);
-  //       setError(error.message);
-  //     });
-  // };
   return (
     <div className="signup-section">
       <Container>
@@ -96,11 +35,11 @@ const SignIn = () => {
             <div className="form-group">
               <label htmlFor="email">Email:</label>
               <input
+                type="email"
                 {...register("email", {
                   required: true,
                   pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
                 })}
-                type="email"
                 id="email"
               />
               {errors?.email?.type === "pattern" && (
@@ -111,7 +50,8 @@ const SignIn = () => {
               <label htmlFor="password">Password:</label>
               <div className="password-container">
                 <input
-                  type={`${passShow ? "text" : "password"}`}
+                  // type={`${passShow ? "text" : "password"}`}
+                  type="password"
                   id="password"
                   {...register("password", {
                     required: true,
@@ -144,7 +84,7 @@ const SignIn = () => {
             </div>
 
             <button className="signUp__button" type="submit">
-              Sign Up
+              Sign In
             </button>
           </form>
           <SignInDefault
