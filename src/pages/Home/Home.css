@@ -9,7 +9,7 @@
 
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 30rem;
 }
 
 .home__container {
@@ -37,4 +37,6 @@
 
 .featured-section {
   margin-top: 3rem;
+  position: relative;
+  z-index: -1;
 }

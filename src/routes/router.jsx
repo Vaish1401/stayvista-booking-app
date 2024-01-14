@@ -28,12 +28,11 @@ const router = createBrowserRouter([
             <Account />
           </PrivateRoutes>
         ),
-        children: [
-          {
-            path: "personal-info",
-            element: <Personal />,
-          },
-        ],
+      },
+      {
+        path: "personal-info/:id",
+        element: <Personal />,
+        loader: {}
       },
       {
         path: "/login",
