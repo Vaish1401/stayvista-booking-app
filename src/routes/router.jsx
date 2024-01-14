@@ -10,6 +10,7 @@ import Attraction from "../pages/Services/attraction/Attraction";
 import Airport from "../pages/Services/airport/Airport";
 import Account from "../components/Accounts/Account";
 import Personal from "../components/Personal/Personal";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/account-settings",
-        element: <Account />,
+        element: (
+          <PrivateRoutes>
+            <Account />
+          </PrivateRoutes>
+        ),
         children: [
           {
             path: "personal-info",

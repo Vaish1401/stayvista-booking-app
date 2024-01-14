@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 
 import Container from "../../components/common/Container";
 import { useContext, useState } from "react";
@@ -11,7 +11,14 @@ import { SignInDefault } from "../../components/common/SignInDefault";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const SignIn = () => {
-  const { login } = useContext(AuthContext);
+  const { login, state } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
+
+  const from = location.state?.from?.pathname || "/";
+
   const {
     register,
     handleSubmit,
@@ -23,9 +30,12 @@ const SignIn = () => {
   const onSubmit = (inputData) => {
     const { email, password } = inputData;
     login(email, password);
-    console.log(email, password);
   };
+  navigate(from, { replace: true });
 
+  if (state.user) {
+    return <Navigate to={"/account-settings"} />;
+  }
   return (
     <div className="signup-section">
       <Container>

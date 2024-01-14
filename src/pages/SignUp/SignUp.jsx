@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { TbEye } from "react-icons/tb";
 
 import Container from "../../components/common/Container";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
 import "./SignUp.css";
 import { SignInDefault } from "../../components/common/SignInDefault";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const SignUp = () => {
+  const { state } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -23,6 +25,10 @@ const SignUp = () => {
       .post("http://localhost:8800/api/auth/register", data)
       .then((res) => console.log("Data sended"));
   };
+
+  if (state.user) {
+    return <Navigate to={"/account-settings"} />;
+  }
 
   // const handleSignUp = () => {
   //   //   event.preventDefault();
