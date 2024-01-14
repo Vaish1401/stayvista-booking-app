@@ -1,0 +1,49 @@
+.account-section {
+  margin-top: 3rem;
+}
+
+.account__user--infos {
+  max-width: 1060px;
+  margin-inline: auto;
+}
+
+.account__user--cards {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.account__title {
+  font-size: 32px;
+}
+
+.account__user--name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.account__user--card {
+  width: 305px;
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.account__card--icon svg {
+  font-size: 1.5rem;
+}
+
+.account__card--info h4 {
+  margin-bottom: 8px;
+}
+
+.account__card--info p {
+  font-size: 14px;
+  color: #717171;
+  line-height: 1.1;
+}

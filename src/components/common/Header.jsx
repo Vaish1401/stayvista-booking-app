@@ -68,9 +68,17 @@ const Header = () => {
               <NavLink className="header__link">List your property</NavLink>
 
               {state.user ? (
-                <NavLink onClick={handleLogOut} to={"/"}>
-                  LogOut
-                </NavLink>
+                <>
+                  <NavLink
+                    to={"/account-settings"}
+                    className="header__link--button button"
+                  >
+                    Account
+                  </NavLink>
+                  <NavLink onClick={handleLogOut} to={"/"}>
+                    LogOut
+                  </NavLink>
+                </>
               ) : (
                 <>
                   <NavLink

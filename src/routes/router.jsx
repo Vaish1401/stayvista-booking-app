@@ -8,6 +8,8 @@ import Flights from "../pages/Services/flights/Flights";
 import CarServices from "../pages/Services/carservices/CarServices";
 import Attraction from "../pages/Services/attraction/Attraction";
 import Airport from "../pages/Services/airport/Airport";
+import Account from "../components/Accounts/Account";
+import Personal from "../components/Personal/Personal";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,16 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-
+      {
+        path: "/account-settings",
+        element: <Account />,
+        children: [
+          {
+            path: "personal-info",
+            element: <Personal />,
+          },
+        ],
+      },
       {
         path: "/login",
         element: <SignIn />,
