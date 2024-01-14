@@ -59,8 +59,7 @@ ul.header__links.users li a {
   gap: 5px;
 }
 
-.header__link,
-.header__nav--service {
+.header__link {
   text-decoration: none;
   font-size: 15px;
   font-weight: 400;
@@ -86,27 +85,6 @@ ul.header__links.users li a {
 
 .header__links.links--button {
   gap: 8px;
-}
-
-.header__nav--services {
-  display: flex;
-  gap: 1rem;
-}
-
-.header__nav--service {
-  display: flex;
-  align-items: center;
-  border-radius: 30px;
-  padding: 8px 12px;
-  gap: 6px;
-  &:hover {
-    background-color: var(--hover-color);
-  }
-}
-
-.header__nav--services .active {
-  background-color: var(--hover-color);
-  border: 1px solid var(--parimary-secondary);
 }
 
 @media screen and (max-width: 600px) {

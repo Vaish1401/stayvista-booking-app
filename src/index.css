@@ -41,6 +41,12 @@ body {
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 20px;
+  }
+}
+
 a,
 button {
   color: inherit;

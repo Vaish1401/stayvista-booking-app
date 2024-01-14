@@ -7,10 +7,7 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 // import { RxCross2 } from "react-icons/rx";
 // import defaultUser from "../../assets/default__user.png";
 import { IoIosHelpCircleOutline } from "react-icons/io";
-import { IoBedOutline } from "react-icons/io5";
-import { FaCar } from "react-icons/fa";
-import { PiAirplaneInFlight } from "react-icons/pi";
-import { MdAttractions } from "react-icons/md";
+
 import language from "../../assets/language.png";
 
 import "./Header.css";
@@ -92,27 +89,6 @@ const Header = () => {
               )}
             </ul>
           </div>
-        </nav>
-        <nav>
-          <ul className="header__nav--services">
-            <NavLink to={"/"} className="header__nav--service">
-              <IoBedOutline /> <span>Stays</span>
-            </NavLink>
-
-            <NavLink to={"/flights"} className="header__nav--service">
-              <PiAirplaneInFlight /> <span>Flights</span>
-            </NavLink>
-
-            <NavLink to={"/carservices"} className="header__nav--service">
-              <FaCar /> <span>Car rentals</span>
-            </NavLink>
-            <NavLink to={"/attractions"} className="header__nav--service">
-              <MdAttractions /> <span>Attractions</span>
-            </NavLink>
-            <NavLink to={"/airport"} className="header__nav--service">
-              <FaCar /> <span>Airport taxis</span>
-            </NavLink>
-          </ul>
         </nav>
 
         {/* mobile menu li start */}
