@@ -30,6 +30,7 @@ html {
   --parimary-secondary: #fff;
   --hover-color: #1a4fa0;
   --border-color: #0079ff;
+  --featured--color: #1a1a3d;
 }
 
 body {
@@ -41,11 +42,11 @@ body {
   overflow-x: hidden;
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   body {
     padding: 0 20px;
   }
-}
+} */
 
 a,
 button {

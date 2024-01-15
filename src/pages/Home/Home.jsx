@@ -20,11 +20,8 @@ const Home = () => {
           </div>
         </Container>
       </div>
-      <Container>
-        <div className="featured-section">
-          <Featured />
-        </div>
-      </Container>
+
+      <Featured />
 
       <MailList />
     </>
