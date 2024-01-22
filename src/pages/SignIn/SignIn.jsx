@@ -36,6 +36,7 @@ const SignIn = () => {
   if (state.user) {
     return <Navigate to={"/account-settings"} />;
   }
+
   return (
     <div className="signup-section">
       <Container>
