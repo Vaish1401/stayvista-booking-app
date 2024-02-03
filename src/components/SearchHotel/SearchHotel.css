@@ -57,9 +57,10 @@
   background-color: var(--border-color);
   padding: 9px 24px;
   transition: all 0.4s;
-  color: var(--parimary-secondary);
+  color: var(--primary-color);
   cursor: pointer;
   &:hover {
+    color: var(--parimary-secondary);
     background-color: var(--primary-color);
   }
 }
@@ -73,7 +74,7 @@
   transform: translate(630px, 5px);
   border-radius: 10px;
   padding: 30px;
-  background-color: var(--parimary-secondary);
+  background-color: var(--primary-color);
 }
 
 .people__container {

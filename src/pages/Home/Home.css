@@ -22,7 +22,7 @@
 
 .home__section--title,
 .home__section--desc {
-  color: var(--parimary-secondary);
+  color: var(--primary-color);
 }
 
 .home__section--title {

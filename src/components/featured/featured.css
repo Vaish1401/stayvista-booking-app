@@ -1,4 +1,5 @@
 .featured-section {
+  margin: 3rem 0;
   padding: 2rem 0 4rem 0;
   background-color: var(--featured--color);
 }
@@ -12,8 +13,9 @@
 }
 
 .featured__title {
-  color: var(--parimary-secondary);
+  color: var(--primary-color);
   padding-left: 3rem;
+  text-align: center;
 }
 
 .featured__title h1 {
@@ -21,7 +23,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .featured__title { 
+  .featured__title {
     padding-left: 1.8rem;
   }
 
@@ -39,7 +41,6 @@
   height: 340px;
   width: 340px;
   overflow: hidden;
-  position: relative;
   border-radius: 10px;
 }
 
@@ -56,11 +57,11 @@
 .featuredTitles {
   position: absolute;
   transform: translate(30px, -100px);
-  color: var(--parimary-secondary);
+  color: var(--primary-color);
 }
 
 .featured__button {
-  background: tomato !important;
+  background: var(--hover-color) !important;
   padding: 7px 12px;
   font-size: 15px;
   border-radius: 7px;
