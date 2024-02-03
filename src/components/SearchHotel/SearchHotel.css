@@ -39,7 +39,7 @@
   outline: none;
 }
 
-.search__inputs--form input[type="text"] {
+.search__inputs--form > input[type="text"] {
   width: 100%;
 }
 
@@ -111,16 +111,6 @@
   gap: 1rem;
   width: 115px;
   height: 35px;
-}
-
-.people__button {
-  padding: 7px 10px;
-  transition: all 0.5s;
-  color: var(--border-color);
-  background-color: #0077ff22;
-  &:hover {
-    background-color: #0077ff3b;
-  }
 }
 
 /* date range calculator */

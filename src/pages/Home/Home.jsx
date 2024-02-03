@@ -20,9 +20,7 @@ const Home = () => {
           </div>
         </Container>
       </div>
-
       <Featured />
-
       <MailList />
     </>
   );

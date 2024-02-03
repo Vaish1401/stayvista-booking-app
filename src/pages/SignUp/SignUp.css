@@ -34,9 +34,10 @@ label {
   color: var(--border-color);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
+.form-group > input[type="text"],
+.form-group > input[type="email"],
+.form-group > input[type="password"],
+.password-container > input[type="password"],
 .signUp__button,
 .signIn__button {
   width: 100%;
@@ -57,7 +58,7 @@ input[type="password"],
 .signIn__button:hover {
   background-color: var(--hover-color) !important;
   border-color: var(--hover-color);
-  color: var(--parimary-secondary);
+  color: var(--primary-color);
 }
 
 input[type="text"]:focus,
