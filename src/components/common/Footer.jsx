@@ -3,6 +3,10 @@ import { FaFacebookF, FaInstagram, FaPinterest } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 
+import visa from "../../assets/visa.png";
+import master from "../../assets/master-cart.png";
+import americanexpress from "../../assets/americanexpress.png";
+
 import "./Footer.css";
 import { Link } from "react-router-dom";
 
@@ -83,6 +87,16 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+        <div className="footer__sub-footer">
+          <div className="copyright">
+            © {new Date().getFullYear()} Rahulfordev All Rights Reserved.
+          </div>
+          <div className="footer__payment--mathod">
+            <img src={visa} alt="visa-card" />
+            <img src={master} alt="master-card" />
+            <img src={americanexpress} alt="american-card" />
           </div>
         </div>
       </div>
