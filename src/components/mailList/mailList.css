@@ -20,11 +20,11 @@
 }
 
 .newsletter__title {
-  font-size: clamp(10px, 5vw, 40px);
+  font-size: clamp(20px, 5vw, 40px);
 }
 
 .newsletter__desc {
-  font-size: 20px;
+  font-size: clamp(10px, 5vw, 20px);
 }
 
 .newsletter__input--content {
@@ -57,5 +57,31 @@
   &:hover {
     color: var(--primary-color) !important;
     background-color: #00bb98 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .newsletter {
+    border-radius: 0px;
+  }
+
+  .newsletter__container {
+    transform: translate(10px, -20px);
+  }
+
+  .newsletter__input--content input {
+    width: 48%;
+  }
+
+  .newsletter__input--content > button {
+    right: 30px;
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .newsletter__input--content > button {
+    right: 30px;
+    margin-right: 0px;
   }
 }
