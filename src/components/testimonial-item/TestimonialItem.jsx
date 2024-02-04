@@ -1,10 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
+
+import "./testimonialItem.css";
+import Star from "../common/Star";
 const TestimonialItem = () => {
   return (
     <div className="testimonial__item">
-      <p>
+      <p className="testimonial__item-desc">
         "OMG! I cannot believe that I have got a brand new landing page after
+        <br />
         getting appmax. It was super easy to edit and publish.I have got a brand
+        <br />
         new landing page."
       </p>
       <div className="testimonial__item--container">
@@ -16,11 +21,17 @@ const TestimonialItem = () => {
             />
           </div>
           <div className="name-job">
-            <p>Mila McSabbu</p>
+            <p className="name">Mila McSabbu</p>
             <p>Freelance Designer</p>
           </div>
         </div>
-        <div className="testimonial__star"></div>
+        <div className="testimonial__star">
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,42 @@
+.user__img img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.testimonial__item--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.testimonial__users {
+  display: flex;
+  gap: 1rem;
+}
+
+.name-job {
+  text-align: start;
+}
+
+.testimonial__item-desc {
+  text-align: start;
+  margin-bottom: 40px;
+}
+
+.testimonial__star {
+  display: flex;
+  gap: 3px;
+}
+
+.one {
+  fill: gold !important;
+}
+.stroke-class {
+  stroke: gold;
+}
+
+.name {
+  font-weight: 700;
+}
