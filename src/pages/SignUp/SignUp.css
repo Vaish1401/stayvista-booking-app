@@ -61,18 +61,19 @@ label {
   color: var(--primary-color);
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
+.form-group > input[type="text"]:focus,
+.form-group > input[type="email"]:focus,
+.form-group > input[type="password"]:focus,
+.password-container > input[type="password"]:focus {
   outline: none;
   border-color: var(--hover-color);
   box-shadow: 0 0 5px rgba(53, 185, 58, 0.5);
 }
 
-button {
+.signUp__button {
   background-color: var(--hover-color);
   color: var(--parimary-secondary);
-  border: none;
+  border-color: var(--hover-color);
   cursor: pointer;
   &:hover {
     background-color: var(--hover-color);

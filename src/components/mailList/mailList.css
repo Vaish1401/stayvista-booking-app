@@ -1,12 +1,61 @@
-.mail {
+.newsletter {
   max-width: 1250px;
-  /* margin-top: 50px; */
   margin: 0 auto;
   background-image: url(../../assets/newsletter.PNG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 113px 0;
+  padding: 10rem 0;
   border-radius: 20px 30px 20px 30px;
+  position: relative;
+}
+
+.newsletter__container {
+  transform: translate(34rem, -50px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+}
+
+.newsletter__title {
+  font-size: clamp(10px, 5vw, 40px);
+}
+
+.newsletter__desc {
+  font-size: 20px;
+}
+
+.newsletter__input--content {
+  position: relative;
+  margin-top: 10px;
+}
+
+.newsletter__input--content input {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  width: 56%;
+  border-radius: 5px;
+  padding: 20px 146px 15px 15px;
+  letter-spacing: 0.3px;
+  border: none;
+  outline: none;
+}
+
+.newsletter__input--content > button {
+  background-color: var(--hover-color) !important;
+  padding: 11px 24px;
+  transition: all 0.4s;
+  color: var(--primary-color) !important;
+  cursor: pointer;
+  position: absolute;
+  right: 39px;
+  border-radius: 5px;
+  top: 4px;
+  &:hover {
+    color: var(--primary-color) !important;
+    background-color: #00bb98 !important;
+  }
 }

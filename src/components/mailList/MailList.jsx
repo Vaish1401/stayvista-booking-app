@@ -3,17 +3,15 @@ import "./mailList.css";
 
 const MailList = () => {
   return (
-    <div className="mail">
+    <div className="newsletter">
       <div className="newsletter__container">
-        <div className="newsletter__content">
-          <h1 className="mailTitle">Save time, save money!</h1>
-          <span className="mailDesc">
-            Sign up and we'll send the best deals to you
-          </span>
-          <div className="mailInputContainer">
-            <input type="text" placeholder="Your Email" />
-            <button>Subscribe</button>
-          </div>
+        <h1 className="newsletter__title">Save time, save money!</h1>
+        <span className="newsletter__desc">
+          Sign up and we'll send the best deals to you
+        </span>
+        <div className="newsletter__input--content">
+          <input type="text" placeholder="Your Email" />
+          <button>Subscribe</button>
         </div>
       </div>
     </div>
