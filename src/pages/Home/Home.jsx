@@ -2,6 +2,7 @@ import SearchHotel from "../../components/SearchHotel/SearchHotel";
 import Container from "../../components/common/Container";
 import Featured from "../../components/featured/Featured";
 import MailList from "../../components/mailList/MailList";
+import Testimonial from "../Testimonial/Testimonial";
 import "./Home.css";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
       </div>
       <Featured />
       <MailList />
+      <Testimonial />
     </>
   );
 };
