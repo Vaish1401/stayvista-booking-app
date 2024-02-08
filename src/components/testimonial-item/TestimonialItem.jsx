@@ -26,11 +26,11 @@ const TestimonialItem = () => {
           </div>
         </div>
         <div className="testimonial__star">
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-          <Star />
+          <Star size="20" />
+          <Star size="20" />
+          <Star size="20" />
+          <Star size="20" />
+          <Star size="20" />
         </div>
       </div>
     </div>
