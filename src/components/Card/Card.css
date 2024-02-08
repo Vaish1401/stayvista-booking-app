@@ -9,6 +9,10 @@
   height: fit-content;
 }
 
+.card__image {
+  overflow: hidden;
+}
+
 .card__image img {
   display: block;
   margin: 0 !important;
@@ -16,6 +20,10 @@
   min-height: 226px;
   object-fit: cover;
   transition: transform 0.9s ease-out;
+}
+
+.card__image:hover img {
+  transform: scale(1.1);
 }
 
 .card__content {
