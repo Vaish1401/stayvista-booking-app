@@ -1,16 +1,15 @@
 import Container from "../common/Container";
+import Title from "../common/Title";
 import "./featured.css";
 
 const Featured = () => {
   return (
     <div className="featured-section">
       <Container>
-        <div className="featured__title">
-          <h1>Popular Destinations</h1>
-          <p>
-            An enim nullam tempor gravida donec enim congue magna at pretium.
-          </p>
-        </div>
+        <Title
+          head="Popular Destinations"
+          desc="An enim nullam tempor gravida donec enim congue magna at pretium."
+        />
         <div className="featured">
           <div className="featuredItem">
             <img
