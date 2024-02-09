@@ -1,10 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
-import Container from "./Container";
+import { useContext, useRef } from "react";
+
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
+
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
 import "./Header.css";
-import { useContext, useRef } from "react";
+
+import Container from "./Container";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Header = () => {

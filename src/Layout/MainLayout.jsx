@@ -6,7 +6,7 @@ import "./MainLayout.css";
 const MainLayout = () => {
   return (
     <div className="main-layout">
-      <Header />
+      {/* <Header /> */}
       <div className="outlet">
         <Outlet />
       </div>
