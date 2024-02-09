@@ -3,6 +3,7 @@ import Container from "../../components/common/Container";
 import Featured from "../../components/featured/Featured";
 import MailList from "../../components/mailList/MailList";
 import Cards from "../Cards/Cards";
+import LatestCards from "../LatestCards/LatestCards";
 import Testimonial from "../Testimonial/Testimonial";
 import "./Home.css";
 
@@ -25,6 +26,7 @@ const Home = () => {
       <Featured />
       <Cards />
       <MailList />
+      <LatestCards />
       <Testimonial />
     </>
   );

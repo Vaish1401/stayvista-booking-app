@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
+import { cardDatas } from "../data/data.js";
 
 const initialState = {
   user: JSON.parse(localStorage.getItem("user")) || null,
@@ -37,7 +38,7 @@ const AuthProvider = ({ children }) => {
     setState({ ...state, user: null });
   };
 
-  const authData = { state, login, logout };
+  const authData = { state, login, logout, cardDatas };
   return (
     <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
   );
