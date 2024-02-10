@@ -3,6 +3,7 @@ import Container from "../../components/common/Container";
 import Title from "../../components/common/Title";
 import LatestCard from "../../components/LatestCard/LatestCard";
 
+import "./LatestCard.css";
 const LatestCards = () => {
   return (
     <Container>
@@ -12,7 +13,7 @@ const LatestCards = () => {
           head="Popular Tours"
           desc="An enim nullam tempor sapien gravida donec enim ipsum"
         />
-        <div className="cards">
+        <div className="cards cards__slide">
           <LatestCard />
         </div>
         <div className="cards__button" style={{ textAlign: "center" }}>

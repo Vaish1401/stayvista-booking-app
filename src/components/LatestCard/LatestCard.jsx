@@ -8,11 +8,36 @@ import Card from "../../components/Card/Card";
 import { cardDatas } from "../../data/data";
 
 import "./LatestCard.css";
+import { useEffect, useState } from "react";
 const LatestCard = () => {
+  const [slidesPerView, setSlidesPerView] = useState(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setSlidesPerView(4);
+      } else if (window.innerWidth >= 768) {
+        setSlidesPerView(3);
+      } else {
+        setSlidesPerView(1);
+      }
+    };
+
+    // Set initial slidesPerView based on window width
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <Container>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={slidesPerView}
         spaceBetween={30}
         pagination={{
           clickable: true,

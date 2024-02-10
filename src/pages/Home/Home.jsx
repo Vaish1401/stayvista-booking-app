@@ -19,7 +19,7 @@ const Home = () => {
                 Discover and book amazing travel experiences with Tripgo
               </p>
             </div>
-            <SearchHotel />
+            {/* <SearchHotel /> */}
           </div>
         </Container>
       </div>
@@ -27,7 +27,7 @@ const Home = () => {
       <Cards />
       <MailList />
       <LatestCards />
-      <Testimonial />
+      {/* <Testimonial /> */}
     </>
   );
 };
