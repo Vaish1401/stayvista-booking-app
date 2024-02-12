@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
@@ -18,7 +18,7 @@ const Header = () => {
   const handleLogOut = () => {
     logout();
   };
-
+  const [isShow, setIsShow] = useState(false);
   const headerEl = useRef();
   if (typeof window !== `undefined`) {
     let prevScrollPosition = window.pageYOffset;
@@ -99,6 +99,83 @@ const Header = () => {
               )}
             </ul>
           </div>
+        </nav>
+
+        {/* hello */}
+        <nav className="responsive-header__content">
+          <div className="responsive__nav-bar">
+            <div className="responsive-header__logo">
+              <h2>Booking.com</h2>
+            </div>
+            <div className="mobile__nav--items">
+              <li
+                className="mobile__nab--hamburger"
+                onClick={() => setIsShow(!isShow)}
+              >
+                {isShow ? (
+                  <RxCross2 className="navIcon" />
+                ) : (
+                  <RxHamburgerMenu className="navIcon" />
+                )}
+              </li>
+            </div>
+          </div>
+          {isShow && (
+            <div className="responsive__menu-bar">
+              <div className="responsive-header__menu">
+                <ul className="responsive-header__menu--links">
+                  <li>
+                    <Link className="header__menu--link active">Home</Link>
+                  </li>
+                  <li>
+                    <Link className="header__menu--link">Tours</Link>
+                  </li>
+                  <li>
+                    <Link className="header__menu--link">Destination</Link>
+                  </li>
+                  <li>
+                    <Link className="header__menu--link">Activity</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="header__nav--links">
+                <ul className="responsive-header__links links--button">
+                  {state.user ? (
+                    <>
+                      <NavLink
+                        to={"/account-settings"}
+                        className="header__link--button button-primary"
+                      >
+                        Account
+                      </NavLink>
+                      <NavLink
+                        className="header__link--button button-secondary"
+                        onClick={handleLogOut}
+                        to={"/"}
+                      >
+                        LogOut
+                      </NavLink>
+                    </>
+                  ) : (
+                    <>
+                      <NavLink
+                        to={"/signup"}
+                        className="header__link--button button-primary"
+                      >
+                        Register
+                      </NavLink>
+                      <NavLink
+                        to={"/login"}
+                        className="header__link--button button-secondary"
+                      >
+                        Sign in
+                      </NavLink>
+                    </>
+                  )}
+                </ul>
+              </div>
+            </div>
+          )}
         </nav>
       </Container>
     </header>

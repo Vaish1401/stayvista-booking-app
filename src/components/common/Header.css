@@ -40,7 +40,8 @@ header.hide {
   margin-block-start: 1rem !important;
 }
 
-.header__links a {
+.header__links a,
+.responsive-header__links a {
   list-style: none;
   padding: 8px 12px;
   transition: all 0.3s;
@@ -73,4 +74,39 @@ header.hide {
 
 .header__menu--link:hover {
   color: var(--hover-color);
+}
+
+.responsive-header__content {
+  display: none;
+}
+
+/* hello */
+
+@media screen and (max-width: 600px) {
+  .header__content {
+    display: none;
+  }
+
+  .responsive-header__content {
+    display: block;
+  }
+
+  .responsive__nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+  }
+
+  .responsive-header__menu {
+    text-align: center;
+  }
+
+  .header__nav--links {
+    text-align: center;
+  }
+
+  .responsive__menu-bar {
+    margin-top: 10px;
+  }
 }
