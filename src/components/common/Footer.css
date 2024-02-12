@@ -137,4 +137,9 @@
     justify-content: center;
     align-items: center;
   }
+
+  .footer__desc,
+  .foote__item--head {
+    padding-left: 8px;
+  }
 }

@@ -11,6 +11,7 @@ import "./LatestCard.css";
 import { useEffect, useState } from "react";
 const LatestCard = () => {
   const [slidesPerView, setSlidesPerView] = useState(4);
+  const [shuffledCardDatas, setShuffledCardDatas] = useState([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,6 +35,12 @@ const LatestCard = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const shuffledArray = [...cardDatas].sort(() => Math.random() - 0.5);
+    setShuffledCardDatas(shuffledArray);
+  }, [cardDatas]);
+
   return (
     <Container>
       <Swiper
@@ -45,7 +52,7 @@ const LatestCard = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {cardDatas?.map((cardData) => (
+        {shuffledCardDatas?.map((cardData) => (
           <SwiperSlide key={cardData.id}>
             <Card key={cardData.id} cardData={cardData} />
           </SwiperSlide>

@@ -1,7 +1,7 @@
 /*   */
 
 .search__inputs {
-  height: 55px;
+  min-height: 55px;
   border-radius: 5px;
   background-color: #ffb700;
   display: flex;
@@ -120,4 +120,26 @@
   transform: translate(280px, 5px);
   border-radius: 10px;
   position: absolute;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .search__inputs {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .rdrCalendarWrapper.rdrDateRangeWrapper {
+    width: 335px;
+    transform: translate(12px, 5px);
+    z-index: 999;
+    position: relative;
+  }
+
+  .peoples {
+    width: 280px;
+    height: 160px;
+    transform: translate(8px, 5px);
+    z-index: 999;
+  }
 }
