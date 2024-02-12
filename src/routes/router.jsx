@@ -35,12 +35,12 @@ const router = createBrowserRouter([
         loader: {},
       },
       {
-        path: "/login",
-        element: <SignIn />,
-      },
-      {
         path: "/signup",
         element: <SignUp />,
+      },
+      {
+        path: "/signin",
+        element: <SignIn />,
       },
       {
         path: "/flights",

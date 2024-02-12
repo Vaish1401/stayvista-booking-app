@@ -9,9 +9,10 @@ import { useForm } from "react-hook-form";
 import "./SignIn.css";
 import { SignInDefault } from "../../components/common/SignInDefault";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { TbEye } from "react-icons/tb";
 
 const SignIn = () => {
-  const { login, state } = useContext(AuthContext);
+  const { login, state, loginError } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -25,13 +26,15 @@ const SignIn = () => {
     formState: { errors },
   } = useForm();
 
-  const [passShow, setPassShow] = useState(false);
+  // const [passShow, setPassShow] = useState(false);
 
   const onSubmit = (inputData) => {
     const { email, password } = inputData;
     login(email, password);
+    if (state.user) {
+      navigate(from, { replace: true });
+    }
   };
-  navigate(from, { replace: true });
 
   if (state.user) {
     return <Navigate to={"/account-settings"} />;
@@ -98,6 +101,9 @@ const SignIn = () => {
               Sign In
             </button>
           </form>
+          <p style={{ color: "red", textAlign: "center", paddingTop: "5px" }}>
+            {loginError}
+          </p>
           <SignInDefault
           // handleSignInWithGithub={handleSignInWithGithub}
           // handleSignInWithGoogle={handleSignInWithGoogle}

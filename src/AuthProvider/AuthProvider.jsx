@@ -13,6 +13,7 @@ export const AuthContext = createContext(initialState);
 
 const AuthProvider = ({ children }) => {
   const [state, setState] = useState(initialState);
+  const [loginError, setLoginError] = useState("");
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(state.user));
@@ -29,7 +30,8 @@ const AuthProvider = ({ children }) => {
       // console.log(response);
       setState({ loading: false, user: response.data.details });
     } catch (error) {
-      console.log(error.response.data.message);
+      setLoginError(error.response.data.message);
+      // console.log(error.response.data.message);
     }
   };
 
@@ -38,7 +40,7 @@ const AuthProvider = ({ children }) => {
     setState({ ...state, user: null });
   };
 
-  const authData = { state, login, logout, cardDatas };
+  const authData = { state, login, logout, cardDatas, loginError };
   return (
     <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
   );

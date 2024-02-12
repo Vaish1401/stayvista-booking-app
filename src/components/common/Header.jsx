@@ -90,7 +90,7 @@ const Header = () => {
                     Register
                   </Link>
                   <Link
-                    to={"/login"}
+                    to={"/signin"}
                     className="header__link--button button-secondary"
                   >
                     Sign in
@@ -165,7 +165,7 @@ const Header = () => {
                         Register
                       </Link>
                       <Link
-                        to={"/login"}
+                        to={"/signin"}
                         className="header__link--button button-secondary"
                       >
                         Sign in
