@@ -96,6 +96,7 @@ header.hide {
     align-items: center;
     justify-content: space-between;
     margin: 0 15px;
+    padding: 8px 0;
   }
 
   .responsive-header__menu {
@@ -107,6 +108,18 @@ header.hide {
   }
 
   .responsive__menu-bar {
-    margin-top: 10px;
+    margin-top: 1rem;
+  }
+
+  .responsive-header__menu--links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .responsive-header__links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
   }
 }
