@@ -67,34 +67,34 @@ const Header = () => {
             <ul className="header__links links--button">
               {state.user ? (
                 <>
-                  <NavLink
+                  <Link
                     to={"/account-settings"}
                     className="header__link--button button-primary"
                   >
                     Account
-                  </NavLink>
-                  <NavLink
+                  </Link>
+                  <Link
                     className="header__link--button button-secondary"
                     onClick={handleLogOut}
                     to={"/"}
                   >
                     LogOut
-                  </NavLink>
+                  </Link>
                 </>
               ) : (
                 <>
-                  <NavLink
+                  <Link
                     to={"/signup"}
                     className="header__link--button button-primary"
                   >
                     Register
-                  </NavLink>
-                  <NavLink
+                  </Link>
+                  <Link
                     to={"/login"}
                     className="header__link--button button-secondary"
                   >
                     Sign in
-                  </NavLink>
+                  </Link>
                 </>
               )}
             </ul>
@@ -142,34 +142,34 @@ const Header = () => {
                 <ul className="responsive-header__links links--button">
                   {state.user ? (
                     <>
-                      <NavLink
+                      <Link
                         to={"/account-settings"}
                         className="header__link--button button-primary"
                       >
                         Account
-                      </NavLink>
-                      <NavLink
+                      </Link>
+                      <Link
                         className="header__link--button button-secondary"
                         onClick={handleLogOut}
                         to={"/"}
                       >
                         LogOut
-                      </NavLink>
+                      </Link>
                     </>
                   ) : (
                     <>
-                      <NavLink
+                      <Link
                         to={"/signup"}
                         className="header__link--button button-primary"
                       >
                         Register
-                      </NavLink>
-                      <NavLink
+                      </Link>
+                      <Link
                         to={"/login"}
                         className="header__link--button button-secondary"
                       >
                         Sign in
-                      </NavLink>
+                      </Link>
                     </>
                   )}
                 </ul>

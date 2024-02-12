@@ -105,3 +105,7 @@ label {
   display: inline;
   content: "⚠ ";
 }
+
+.signup-section {
+  margin-top: 7rem;
+}
