@@ -2,8 +2,13 @@ import Container from "../common/Container";
 import { FaRegUserCircle } from "react-icons/fa";
 import "./Account.css";
 import { Link, Outlet } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Account = () => {
+  const { state } = useContext(AuthContext);
+  const { username, email } = state.user;
+
   return (
     <div className="account-section">
       <Container>
@@ -11,8 +16,8 @@ const Account = () => {
           <h2 className="account__title">Account</h2>
 
           <div className="account__user--fnfo">
-            <span className="account__user--name">Md Rahul Ali,</span>{" "}
-            <span className="account__user--email">frahulali@gmail.com</span>
+            <span className="account__user--name">{username},</span>
+            <span className="account__user--email"> {email}</span>
           </div>
           <div className="account__user--cards">
             <Link to={"personal-info"}>

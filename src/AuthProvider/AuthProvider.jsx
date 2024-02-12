@@ -16,7 +16,7 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(state.user));
-    console.log(state.user);
+    // console.log(state.user);
   }, [state.user]);
 
   const login = async (email, password) => {
@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
         "http://localhost:8800/api/auth/login",
         { email, password }
       );
-      console.log(response);
+      // console.log(response);
       setState({ loading: false, user: response.data.details });
     } catch (error) {
       console.log(error.response.data.message);
