@@ -11,6 +11,7 @@ import Airport from "../pages/Services/airport/Airport";
 import Account from "../components/Accounts/Account";
 import Personal from "../components/Personal/Personal";
 import PrivateRoutes from "./PrivateRoutes";
+import Hotels from "../pages/Hotels/Hotels";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,7 @@ const router = createBrowserRouter([
         path: "airport",
         element: <Airport />,
       },
+      { path: "hotels", element: <Hotels /> },
     ],
   },
 ]);

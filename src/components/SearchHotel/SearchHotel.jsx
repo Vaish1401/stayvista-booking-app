@@ -10,6 +10,7 @@ import { useState } from "react";
 import Container from "../common/Container";
 
 import "./SearchHotel.css";
+import { useNavigate } from "react-router-dom";
 
 const SearchHotel = () => {
   // const [room, setRoom] = useState(1);
@@ -46,62 +47,71 @@ const SearchHotel = () => {
   //   }
   // };
 
+  const navigate = useNavigate();
   const [location, setLocation] = useState(false);
-  const [date, setDate] = useState(false);
-  const [man, setMan] = useState(false);
-
-  const [state, setState] = useState({
-    room: 1,
-    children: 0,
-    adult: 1,
-  });
+  const [date, setShowDate] = useState(false);
+  const [showPerson, setPersonShow] = useState(false);
 
   const handleDecrement = (key) => {
-    setState((prevState) => ({
+    setPerson((prevState) => ({
       ...prevState,
       [key]: prevState[key] + 1,
     }));
   };
 
   const handleIncrement = (key) => {
-    setState((prevState) => ({
+    setPerson((prevState) => ({
       ...prevState,
       [key]: prevState[key] > 0 ? prevState[key] - 1 : prevState[key],
     }));
   };
 
-  // Usage examples
   const handleRoomDecrement = () => {
     handleDecrement("room");
-  };
-
-  const handleChildrenDecrement = () => {
-    handleDecrement("children");
-  };
-
-  const handleAdultDecrement = () => {
-    handleDecrement("adult");
   };
 
   const handleRoomIncrement = () => {
     handleIncrement("room");
   };
 
+  const handleChildrenDecrement = () => {
+    handleDecrement("children");
+  };
+
   const handleChildrenIncrement = () => {
     handleIncrement("children");
+  };
+
+  const handleAdultDecrement = () => {
+    handleDecrement("adult");
   };
 
   const handleAdultIncrement = () => {
     handleIncrement("adult");
   };
 
-  const [dateRange, setDateRange] = useState([
+  // input value get
+  const [destination, setDestination] = useState("");
+
+  const [person, setPerson] = useState({
+    room: 1,
+    children: 0,
+    adult: 1,
+  });
+
+  const [dateRange, setShowDateRange] = useState([
     {
       startDate: format(new Date(), "MM/dd/yyyy"),
       endDate: format(new Date(), "MM/dd/yyyy"),
       key: "selection",
     },
   ]);
+
+  const handleDataSend = () => {
+    navigate("/hotels", {
+      state: { destination, dateRange, person },
+    });
+  };
   return (
     <Container>
       <div className="search__inputs">
@@ -110,29 +120,37 @@ const SearchHotel = () => {
           <input
             onClick={() => setLocation(!location)}
             type="text"
+            value={destination}
+            onChange={(e) => setDestination(e.target.value)}
             placeholder="Why are you going?"
           />
         </div>
-        <div className="search__inputs--form" onClick={() => setDate(!date)}>
+        <div
+          className="search__inputs--form"
+          onClick={() => setShowDate(!date)}
+        >
           <SlCalender />
           <span>{`${format(dateRange[0].startDate, "MM/dd/yyyy")}  —  ${format(
             dateRange[0].endDate,
             "MM/dd/yyyy"
           )}`}</span>
         </div>
-        <div className="search__inputs--form" onClick={() => setMan(!man)}>
+        <div
+          className="search__inputs--form"
+          onClick={() => setPersonShow(!showPerson)}
+        >
           <FiUser />
           <span>
-            {state.adult} adults · {state.children} children · {state.room}
+            {person.adult} adults · {person.children} children · {person.room}
             room
           </span>
           <IoIosArrowDown />
         </div>
         <div className="search__inputs--form">
-          <button>Search</button>
+          <button onClick={handleDataSend}>Search</button>
         </div>
       </div>
-      {man && (
+      {showPerson && (
         <div className="peoples">
           <div className="people__container">
             <div className="people">
@@ -144,7 +162,7 @@ const SearchHotel = () => {
                 >
                   -
                 </button>
-                <span>{state.adult}</span>
+                <span>{person.adult}</span>
                 <button
                   onClick={handleAdultDecrement}
                   className="people__button decre"
@@ -162,7 +180,7 @@ const SearchHotel = () => {
                 >
                   -
                 </button>
-                <span>{state.children}</span>
+                <span>{person.children}</span>
                 <button
                   onClick={handleChildrenDecrement}
                   className="people__button decre"
@@ -180,7 +198,7 @@ const SearchHotel = () => {
                 >
                   -
                 </button>
-                <span>{state.room}</span>
+                <span>{person.room}</span>
                 <button
                   onClick={handleRoomDecrement}
                   className="people__button decre"
@@ -191,7 +209,7 @@ const SearchHotel = () => {
             </div>
           </div>
           <button
-            onClick={() => setMan(false)}
+            onClick={() => setPersonShow(false)}
             className="people__button--done"
           >
             Done
@@ -201,7 +219,7 @@ const SearchHotel = () => {
       {date && (
         <DateRange
           editableDateInputs={true}
-          onChange={(item) => setDateRange([item.selection])}
+          onChange={(item) => setShowDateRange([item.selection])}
           moveRangeOnFirstSelection={false}
           ranges={dateRange}
         />
