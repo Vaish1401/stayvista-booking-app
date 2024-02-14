@@ -24,7 +24,7 @@
 
 ```bash
 git clone https://github.com/Rahulfordev/react-booking-website.git
-cd travelVista
+cd react-booking-website
 ```
 
 2. Install dependencies:
