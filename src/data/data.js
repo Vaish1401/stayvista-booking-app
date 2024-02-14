@@ -7,6 +7,7 @@ export const cardDatas = [
     title: "Ecotourism Sabah sightseeing tours – 2 hours",
     location: "Sabah, Malaysia",
     price: "$10.00",
+    score: "9.8",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const cardDatas = [
     title: "Copenhagen City Tours – 4 Hours",
     location: "Copenhagen, Denmark",
     price: "$15.00",
+    score: "7.4",
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const cardDatas = [
     title: "Copenhagen to Helsinki – 7 Days",
     location: "Copenhagen, Denmark",
     price: "$339.99",
+    score: "8.5",
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const cardDatas = [
     title: "Amsterdam and Lake IJssel Cycle",
     location: "Amsterdam, Netherlands",
     price: "$233.00",
+    score: "9.2",
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ export const cardDatas = [
     title: "Miniatur Wunderland & Historic Port of Hamburg",
     location: "Hamburg, Germany",
     price: "$222.00",
+    score: "6.7",
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ export const cardDatas = [
     title: "The Splendour of Saint Petersburg and Moscow",
     location: "Moscow, Russia",
     price: "$280.00",
+    score: "8.6",
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ export const cardDatas = [
     title: "Tour of Caucasus Mountains – Self Guided",
     location: "2200 Encore Pkwy, Alpharetta, GA 30009, USA",
     price: "$69.50",
+    score: "7.8",
   },
   {
     id: 8,
@@ -70,5 +77,6 @@ export const cardDatas = [
     title: "9-Day Beijing – Guilin and Shanghai Tour",
     location: "Beijing, China",
     price: "$199.99",
+    score: "7.2",
   },
 ];

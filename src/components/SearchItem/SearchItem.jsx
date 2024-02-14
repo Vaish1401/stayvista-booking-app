@@ -11,11 +11,7 @@ const SearchItem = () => {
           <img src={card.image} alt="" className="siImg" />
           <div className="siDesc">
             <h1 className="siTitle">{card.title}</h1>
-            <span className="siDistance">500m from center</span>
-            <span className="siTaxiOp">Free airport taxi</span>
-            <span className="siSubtitle">
-              Studio Apartment with Air conditioning
-            </span>
+            <span className="siSubtitle">{card.location}</span>
             <span className="siFeatures">
               Entire studio • 1 bathroom • 21m² 1 full bed
             </span>
@@ -27,7 +23,7 @@ const SearchItem = () => {
           <div className="siDetails">
             <div className="siRating">
               <span>Excellent</span>
-              <button>8.9</button>
+              <button>{card.score}</button>
             </div>
             <div className="siDetailTexts">
               <span className="siPrice">{card.price}</span>

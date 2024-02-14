@@ -20,6 +20,9 @@ const Hotels = () => {
       <div className="hotels">
         <div className="listContainer">
           <div className="listWrapper">
+            <div className="listResult">
+              <SearchItem />
+            </div>
             <div className="listSearch">
               <h1 className="lsTitle">Search</h1>
               <div className="lsItem">
@@ -88,12 +91,6 @@ const Hotels = () => {
                 </div>
               </div>
               <button className="search-button">Search</button>
-            </div>
-            <div className="listResult">
-              <SearchItem />
-              <SearchItem />
-              <SearchItem />
-              <SearchItem />
             </div>
           </div>
         </div>
