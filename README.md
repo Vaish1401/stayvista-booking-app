@@ -23,7 +23,7 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/devRezaulKarim/travelVista.git
+git clone https://github.com/Rahulfordev/react-booking-website.git
 cd travelVista
 ```
 
