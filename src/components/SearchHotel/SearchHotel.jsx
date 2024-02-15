@@ -109,7 +109,7 @@ const SearchHotel = () => {
 
   const handleDataSend = () => {
     navigate("/hotels", {
-      state: { destination, dateRange, person },
+      state: { destination: destination.toLowerCase(), dateRange, person },
     });
   };
   return (
