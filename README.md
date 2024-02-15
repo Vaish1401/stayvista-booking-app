@@ -1,4 +1,5 @@
 # Travel Vista - A Booking Site
+<<<<<<< HEAD
 
 # Visit: [Travel Vista](https://booking-rahulfordev.netlify.app/)
 
@@ -11,13 +12,31 @@
 - **react-toastify**: A React notification library.
 - **Firebase**: A cloud-based platform for building web and mobile applications.
 
+=======
+# Visit: [Travel Vista](https://booking-rahulfordev.netlify.app/)
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **react-router-dom**: Declarative routing for React.js.
+- **react-date-range**: Date picker component for React.
+- **react-icons**: A collection of SVG icons for popular icon libraries.
+- **react-toastify**: A React notification library.
+- **Firebase**: A cloud-based platform for building web and mobile applications.
+
+>>>>>>> 16d408392eb2a716e97e361b71050910c207f213
 ## Features
 
 1. **Browse Hotels**: View all available hotels on the platform.
 2. **Filter by City**: Easily filter hotels based on the city name.
 3. **User Authentication**:
+<<<<<<< HEAD
    - **Sign Up**: Create a new account to access personalized features.
    - **Sign In**: Log in to your account for a customized experience.
+=======
+    - **Sign Up**: Create a new account to access personalized features.
+    - **Sign In**: Log in to your account for a customized experience.
+>>>>>>> 16d408392eb2a716e97e361b71050910c207f213
 
 ## Installation
 
