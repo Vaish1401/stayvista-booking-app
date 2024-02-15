@@ -1,13 +1,17 @@
-import Container from "../common/Container";
 import LoadingSpinner from "../../assets/tube-spinner.svg";
 
 const Loading = () => {
   return (
-    <Container>
-      <div>
-        <img src={LoadingSpinner} alt="" />
-      </div>
-    </Container>
+    <div
+      style={{
+        display: "flex",
+        height: "80vh",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <img style={{ width: "250px" }} src={LoadingSpinner} alt="" />
+    </div>
   );
 };
 

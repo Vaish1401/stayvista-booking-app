@@ -5,10 +5,11 @@ import "swiper/css/pagination";
 
 import Container from "../../components/common/Container";
 import Card from "../../components/Card/Card";
-import { cardDatas } from "../../data/data";
 
 import "./LatestCard.css";
 import { useEffect, useState } from "react";
+import useFetch from "../../hooks/useFetch";
+import Loading from "../Loading/Loading";
 const LatestCard = () => {
   const [slidesPerView, setSlidesPerView] = useState(4);
   const [shuffledCardDatas, setShuffledCardDatas] = useState([]);
@@ -36,10 +37,13 @@ const LatestCard = () => {
     };
   }, []);
 
+  const { data, loading, error, reFetch } = useFetch(
+    `https://jobs-rvc2.onrender.com/cardDatas`
+  );
   useEffect(() => {
-    const shuffledArray = [...cardDatas].sort(() => Math.random() - 0.5);
+    const shuffledArray = [...data].sort(() => Math.random() - 0.5);
     setShuffledCardDatas(shuffledArray);
-  }, [cardDatas]);
+  }, [data]);
 
   return (
     <Container>
@@ -52,11 +56,15 @@ const LatestCard = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {shuffledCardDatas?.map((cardData) => (
-          <SwiperSlide key={cardData.id}>
-            <Card key={cardData.id} cardData={cardData} />
-          </SwiperSlide>
-        ))}
+        {loading ? (
+          <Loading />
+        ) : (
+          shuffledCardDatas?.map((cardData) => (
+            <SwiperSlide key={cardData.id}>
+              <Card key={cardData.id} cardData={cardData} />
+            </SwiperSlide>
+          ))
+        )}
       </Swiper>
     </Container>
   );
