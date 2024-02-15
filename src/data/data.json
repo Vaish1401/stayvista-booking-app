@@ -6,7 +6,7 @@
       "time": "2 hours",
       "title": "Ecotourism Sabah sightseeing tours – 2 hours",
       "location": "Sabah, Malaysia",
-      "price": "$10.00",
+      "price": 100,
       "score": "9.8",
       "city": "sabah"
     },
@@ -16,7 +16,7 @@
       "time": "4 hours",
       "title": "Copenhagen city Tours – 4 Hours",
       "location": "Copenhagen, Denmark",
-      "price": "$15.00",
+      "price": 150,
       "score": "7.4",
       "city": "copenhagen"
     },
@@ -26,7 +26,7 @@
       "time": "7 days",
       "title": "Copenhagen to Helsinki – 7 Days",
       "location": "Copenhagen, Denmark",
-      "price": "$339.99",
+      "price": 339,
       "score": "8.5",
       "city": "copenhagen"
     },
@@ -36,7 +36,7 @@
       "time": "3 days",
       "title": "Amsterdam and Lake IJssel Cycle",
       "location": "Amsterdam, Netherlands",
-      "price": "$233.00",
+      "price": 233,
       "score": "9.2",
       "city": "amsterdam"
     },
@@ -46,7 +46,7 @@
       "time": "3 days",
       "title": "Miniatur Wunderland & Historic Port of Hamburg",
       "location": "Hamburg, Germany",
-      "price": "$222.00",
+      "price": 222,
       "score": "6.7",
       "city": "hamburg"
     },
@@ -56,7 +56,7 @@
       "time": "5 days",
       "title": "The Splendour of Saint Petersburg and Moscow",
       "location": "Moscow, Russia",
-      "price": "$280.00",
+      "price": 280,
       "score": "8.6",
       "city": "moscow"
     },
@@ -66,9 +66,9 @@
       "time": "5 days",
       "title": "Tour of Caucasus Mountains – Self Guided",
       "location": "2200 Encore Pkwy, Alpharetta, GA 30009, USA",
-      "price": "$69.50",
+      "price": 69,
       "score": "7.8",
-      "city": "Georgia"
+      "city": "georgia"
     },
     {
       "id": 8,
@@ -76,9 +76,89 @@
       "time": "9 days",
       "title": "9-Day Beijing – Guilin and Shanghai Tour",
       "location": "Beijing, China",
-      "price": "$199.99",
+      "price": 199,
       "score": "7.2",
-      "city": "Beijing"
+      "city": "beijing"
+    },
+    {
+      "id": 9,
+      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2023/04/tour-hours-2-636x426.jpg",
+      "time": "2 hours",
+      "title": "Ecotourism Sabah sightseeing tours – 2 hours",
+      "location": "Sabah, Malaysia",
+      "price": 50,
+      "score": "9.8",
+      "city": "sabah"
+    },
+    {
+      "id": 10,
+      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2023/04/tour-hours-1-636x426.jpg",
+      "time": "4 hours",
+      "title": "Copenhagen city Tours – 4 Hours",
+      "location": "Copenhagen, Denmark",
+      "price": 80,
+      "score": "7.4",
+      "city": "copenhagen"
+    },
+    {
+      "id": 11,
+      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Copenhagen-636x426.jpg",
+      "time": "7 days",
+      "title": "Copenhagen to Helsinki – 7 Days",
+      "location": "Copenhagen, Denmark",
+      "price": 180,
+      "score": "8.5",
+      "city": "copenhagen"
+    },
+    {
+      "id": 12,
+      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Netherlands-636x426.jpg",
+      "time": "3 days",
+      "title": "Amsterdam and Lake IJssel Cycle",
+      "location": "Amsterdam, Netherlands",
+      "price": 120,
+      "score": "9.2",
+      "city": "amsterdam"
+    },
+    {
+      "id": 13,
+      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Hamburg-636x426.jpg",
+      "time": "3 days",
+      "title": "Miniatur Wunderland & Historic Port of Hamburg",
+      "location": "Hamburg, Germany",
+      "price": 110,
+      "score": "6.7",
+      "city": "hamburg"
+    },
+    {
+      "id": 14,
+      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Tour-Russia-636x426.jpg",
+      "time": "5 days",
+      "title": "The Splendour of Saint Petersburg and Moscow",
+      "location": "Moscow, Russia",
+      "price": 140,
+      "score": "8.6",
+      "city": "moscow"
+    },
+    {
+      "id": 15,
+      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/image-banner-home1-02-636x426.jpg",
+      "time": "5 days",
+      "title": "Tour of Caucasus Mountains – Self Guided",
+      "location": "2200 Encore Pkwy, Alpharetta, GA 30009, USA",
+      "price": 30,
+      "score": "7.8",
+      "city": "georgia"
+    },
+    {
+      "id": 16,
+      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/tour-9-636x426.jpg",
+      "time": "9 days",
+      "title": "9-Day Beijing – Guilin and Shanghai Tour",
+      "location": "Beijing, China",
+      "price": 99,
+      "score": "7.2",
+      "city": "beijing"
     }
   ]
 }

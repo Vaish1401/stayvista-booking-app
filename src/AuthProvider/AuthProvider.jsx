@@ -14,6 +14,7 @@ export const AuthContext = createContext(initialState);
 const AuthProvider = ({ children }) => {
   const [state, setState] = useState(initialState);
   const [loginError, setLoginError] = useState("");
+  const [hoteData, setHotelData] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(state.user));
@@ -40,7 +41,15 @@ const AuthProvider = ({ children }) => {
     setState({ ...state, user: null });
   };
 
-  const authData = { state, login, logout, loginError };
+  const { data, loading, error, reFetch } = useFetch(
+    `https://rahulfordev-json-server.vercel.app/cardDatas`
+  );
+
+  useEffect(() => {
+    setHotelData(data);
+  }, [data]);
+
+  const authData = { state, login, logout, loginError, hoteData };
   return (
     <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
   );

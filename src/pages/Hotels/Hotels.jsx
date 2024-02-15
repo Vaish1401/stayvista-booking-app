@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
@@ -9,7 +9,10 @@ import "./Hotels.css";
 import SearchItem from "../../components/SearchItem/SearchItem";
 import useFetch from "../../hooks/useFetch";
 import Loading from "../../components/Loading/Loading";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Hotels = () => {
+  const { hoteData } = useContext(AuthContext);
+
   const location = useLocation();
 
   const [destination, setDestination] = useState(location.state.destination);
@@ -20,9 +23,7 @@ const Hotels = () => {
   const [max, setMax] = useState(undefined);
 
   const { data, loading, error, reFetch } = useFetch(
-    `https://jobs-rvc2.onrender.com/cardDatas?city=${destination}&min=${
-      min || 0
-    }&max=${max || 999}}`
+    `https://rahulfordev-json-server.vercel.app/cardDatas?city=${destination}`
   );
 
   const handleReSearch = () => {
@@ -37,10 +38,14 @@ const Hotels = () => {
             <div className="listResult">
               {loading ? (
                 <Loading />
-              ) : data?.length === 0 ? (
-                <h1>data</h1>
+              ) : data.length === 0 ? (
+                hoteData?.map((hotel) => (
+                  <SearchItem key={hotel.id} hotel={hotel} />
+                ))
               ) : (
-                data.map((hotel) => <SearchItem key={hotel.id} hotel={hotel} />)
+                data?.map((hotel) => (
+                  <SearchItem key={hotel.id} hotel={hotel} />
+                ))
               )}
             </div>
             <div className="listSearch">

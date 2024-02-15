@@ -38,7 +38,7 @@ const LatestCard = () => {
   }, []);
 
   const { data, loading, error, reFetch } = useFetch(
-    `https://jobs-rvc2.onrender.com/cardDatas`
+    `https://rahulfordev-json-server.vercel.app/cardDatas`
   );
   useEffect(() => {
     const shuffledArray = [...data].sort(() => Math.random() - 0.5);
