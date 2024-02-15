@@ -7,6 +7,8 @@ import Container from "../../components/common/Container";
 
 import "./Hotels.css";
 import SearchItem from "../../components/SearchItem/SearchItem";
+import useFetch from "../../hooks/useFetch";
+import Loading from "../../components/Loading/Loading";
 const Hotels = () => {
   const location = useLocation();
 
@@ -14,6 +16,18 @@ const Hotels = () => {
   const [date, setDate] = useState(location.state.dateRange);
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(location.state.person);
+  const [min, setMin] = useState(undefined);
+  const [max, setMax] = useState(undefined);
+
+  const { data, loading, error, reFetch } = useFetch(
+    `https://jobs-rvc2.onrender.com/cardDatas?city=${destination}&min=${
+      min || 0
+    }&max=${max || 999}}`
+  );
+
+  const handleReSearch = () => {
+    reFetch();
+  };
 
   return (
     <Container>
@@ -21,7 +35,13 @@ const Hotels = () => {
         <div className="listContainer">
           <div className="listWrapper">
             <div className="listResult">
-              <SearchItem />
+              {loading ? (
+                <Loading />
+              ) : data?.length === 0 ? (
+                <h1>data</h1>
+              ) : (
+                data.map((hotel) => <SearchItem key={hotel.id} hotel={hotel} />)
+              )}
             </div>
             <div className="listSearch">
               <h1 className="lsTitle">Search</h1>
@@ -38,13 +58,15 @@ const Hotels = () => {
                   )}`}
                 </span>
 
-                {openDate && (
-                  <DateRange
-                    onChange={(item) => setDate([item.selection])}
-                    minDate={new Date()}
-                    ranges={date}
-                  />
-                )}
+                <div className="clearnder_popup">
+                  {openDate && (
+                    <DateRange
+                      onChange={(item) => setDate([item.selection])}
+                      minDate={new Date()}
+                      ranges={date}
+                    />
+                  )}
+                </div>
               </div>
               <div className="lsItem">
                 <label>Options</label>
@@ -53,13 +75,21 @@ const Hotels = () => {
                     <span className="lsOptionText">
                       Min price <small>per night</small>
                     </span>
-                    <input type="number" className="lsOptionInput" />
+                    <input
+                      type="number"
+                      onChange={(e) => setMin(e.target.value)}
+                      className="lsOptionInput"
+                    />
                   </div>
                   <div className="lsOptionItem">
                     <span className="lsOptionText">
                       Max price <small>per night</small>
                     </span>
-                    <input type="number" className="lsOptionInput" />
+                    <input
+                      type="number"
+                      onChange={(e) => setMax(e.target.value)}
+                      className="lsOptionInput"
+                    />
                   </div>
                   <div className="lsOptionItem">
                     <span className="lsOptionText">Adult</span>
@@ -90,7 +120,9 @@ const Hotels = () => {
                   </div>
                 </div>
               </div>
-              <button className="search-button">Search</button>
+              <button className="search-button" onClick={handleReSearch}>
+                Search
+              </button>
             </div>
           </div>
         </div>

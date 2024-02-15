@@ -102,3 +102,7 @@
 .listResult {
   flex: 3;
 }
+
+.clearnder_popup {
+  transform: translate(-36.5rem, 1rem);
+}

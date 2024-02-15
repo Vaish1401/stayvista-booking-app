@@ -30,7 +30,7 @@ const Card = ({ cardData }) => {
             <Star size="16" />
           </span>
           <div className="card__pb">
-            <h4 className="card__price">{price}</h4>
+            <h4 className="card__price">${price}</h4>
             <button className="card__button">Explore</button>
           </div>
         </div>

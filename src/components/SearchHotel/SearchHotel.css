@@ -54,14 +54,18 @@
 }
 
 .search__inputs--form:last-child {
-  background-color: var(--border-color);
-  padding: 9px 24px;
+  padding: 11px 4px;
+}
+
+.search__inputs--form:last-child button {
+  background-color: var(--border-color) !important;
+  padding: 13px 24px;
   transition: all 0.4s;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   cursor: pointer;
   &:hover {
-    color: var(--parimary-secondary);
-    background-color: var(--primary-color);
+    color: var(--parimary-secondary) !important;
+    background-color: var(--primary-color) !important;
   }
 }
 
