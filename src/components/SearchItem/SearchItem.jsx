@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import "./searchItem.css";
+import "./searchHotel.css";
 
 const SearchItem = ({ hotel }) => {
   const { image, title, location, score, price, id } = hotel;
