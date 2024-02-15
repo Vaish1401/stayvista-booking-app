@@ -1,72 +1,8 @@
-# Travel Vista - A Booking Site
-<<<<<<< HEAD
+# React + Vite
 
-# Visit: [Travel Vista](https://booking-rahulfordev.netlify.app/)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Technologies Used
+Currently, two official plugins are available:
 
-- **React**: A JavaScript library for building user interfaces.
-- **react-router-dom**: Declarative routing for React.js.
-- **react-date-range**: Date picker component for React.
-- **react-icons**: A collection of SVG icons for popular icon libraries.
-- **react-toastify**: A React notification library.
-- **Firebase**: A cloud-based platform for building web and mobile applications.
-
-=======
-# Visit: [Travel Vista](https://booking-rahulfordev.netlify.app/)
-
-## Technologies Used
-
-- **React**: A JavaScript library for building user interfaces.
-- **react-router-dom**: Declarative routing for React.js.
-- **react-date-range**: Date picker component for React.
-- **react-icons**: A collection of SVG icons for popular icon libraries.
-- **react-toastify**: A React notification library.
-- **Firebase**: A cloud-based platform for building web and mobile applications.
-
->>>>>>> 16d408392eb2a716e97e361b71050910c207f213
-## Features
-
-1. **Browse Hotels**: View all available hotels on the platform.
-2. **Filter by City**: Easily filter hotels based on the city name.
-3. **User Authentication**:
-<<<<<<< HEAD
-   - **Sign Up**: Create a new account to access personalized features.
-   - **Sign In**: Log in to your account for a customized experience.
-=======
-    - **Sign Up**: Create a new account to access personalized features.
-    - **Sign In**: Log in to your account for a customized experience.
->>>>>>> 16d408392eb2a716e97e361b71050910c207f213
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Rahulfordev/react-booking-website.git
-cd react-booking-website
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Configure Firebase:
-
-   - Create a Firebase project: [Firebase Console](https://console.firebase.google.com/).
-   - Obtain your Firebase configuration.
-   - Replace the Firebase configuration in the project (usually in `src/firebase/firebase.js`).
-
-4. Run the application:
-
-```bash
-npm run dev
-```
-
-Visit [http://localhost:5173/](http://localhost:5173/) to view the app in your browser.
-
-## Contributing
-
-If you'd like to contribute to this project, feel free to open issues and submit pull requests.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
