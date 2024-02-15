@@ -6,8 +6,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Account = () => {
-  const { state } = useContext(AuthContext);
-  const { username, email } = state.user;
+  const { state, user } = useContext(AuthContext);
+  const { username, email } = state.user || user;
 
   return (
     <div className="account-section">
@@ -16,7 +16,9 @@ const Account = () => {
           <h2 className="account__title">Account</h2>
 
           <div className="account__user--fnfo">
-            <span className="account__user--name">{username},</span>
+            <span className="account__user--name">
+              {username} {user.displayName},
+            </span>
             <span className="account__user--email"> {email}</span>
           </div>
           <div className="account__user--cards">

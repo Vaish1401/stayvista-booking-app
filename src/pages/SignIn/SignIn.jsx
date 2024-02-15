@@ -1,5 +1,6 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable react/no-unescaped-entities */
+import "react-toastify/dist/ReactToastify.css";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 
 import Container from "../../components/common/Container";
@@ -10,9 +11,12 @@ import "./SignIn.css";
 import { SignInDefault } from "../../components/common/SignInDefault";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { TbEye } from "react-icons/tb";
+import { toast } from "react-toastify";
 
 const SignIn = () => {
-  const { login, state, loginError } = useContext(AuthContext);
+  const { login, state, loginError, user, signInWithGoogle } =
+    useContext(AuthContext);
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -36,7 +40,23 @@ const SignIn = () => {
     }
   };
 
-  if (state.user) {
+  const handleSignInWithGoogle = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        toast.success("Signin successful!", {
+          toastId: "Rahul Ali",
+        });
+        // console.log(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        // console.log(error.message);
+        setError(error.message);
+      });
+  };
+
+  if (state.user || user) {
     return <Navigate to={"/account-settings"} />;
   }
 
@@ -102,11 +122,11 @@ const SignIn = () => {
             </button>
           </form>
           <p style={{ color: "red", textAlign: "center", paddingTop: "5px" }}>
-            {loginError}
+            {loginError}, {error}
           </p>
           <SignInDefault
-          // handleSignInWithGithub={handleSignInWithGithub}
-          // handleSignInWithGoogle={handleSignInWithGoogle}
+            // handleSignInWithGithub={handleSignInWithGithub}
+            handleSignInWithGoogle={handleSignInWithGoogle}
           />
           <div className="go__signup">
             <p className="newuser">

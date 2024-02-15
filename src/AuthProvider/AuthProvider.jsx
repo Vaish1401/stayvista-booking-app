@@ -1,4 +1,12 @@
 /* eslint-disable react/prop-types */
+import {
+  onAuthStateChanged,
+  signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
+import { auth } from "../firebase/firebase";
+
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch";
@@ -11,7 +19,10 @@ const initialState = {
 
 export const AuthContext = createContext(initialState);
 
+const googleProvider = new GoogleAuthProvider();
+
 const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
   const [state, setState] = useState(initialState);
   const [loginError, setLoginError] = useState("");
   const [hoteData, setHotelData] = useState([]);
@@ -49,7 +60,36 @@ const AuthProvider = ({ children }) => {
     setHotelData(data);
   }, [data]);
 
-  const authData = { state, login, logout, loginError, hoteData };
+  const signInWithGoogle = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
+
+  const logOutWithGoogle = () => {
+    return signOut(auth);
+  };
+
+  // observer user auth state
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    // stop observing while unmounting
+    return () => {
+      return unsubscribe();
+    };
+  }, []);
+
+  const authData = {
+    state,
+    login,
+    logout,
+    loginError,
+    hoteData,
+    signInWithGoogle,
+    logOutWithGoogle,
+    user,
+  };
   return (
     <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
   );

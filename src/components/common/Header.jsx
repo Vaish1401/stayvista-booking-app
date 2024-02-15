@@ -1,4 +1,5 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
 import { useContext, useRef, useState } from "react";
 
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -11,11 +12,22 @@ import "./Header.css";
 
 import Container from "./Container";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Header = () => {
-  const { state, logout } = useContext(AuthContext);
+  const { state, logout, user, logOutWithGoogle } = useContext(AuthContext);
 
   const handleLogOut = () => {
+    logOutWithGoogle()
+      .then((result) => {
+        toast.success("Signout successful!");
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+        console.log(error);
+      });
     logout();
   };
   const [isShow, setIsShow] = useState(false);
@@ -65,7 +77,7 @@ const Header = () => {
           </div>
           <div className="header__nav--links">
             <ul className="header__links links--button">
-              {state.user ? (
+              {state.user || user ? (
                 <>
                   <Link
                     to={"/account-settings"}
@@ -140,7 +152,7 @@ const Header = () => {
               </div>
               <div className="header__nav--links">
                 <ul className="responsive-header__links links--button">
-                  {state.user ? (
+                  {state.user || user ? (
                     <>
                       <Link
                         to={"/account-settings"}

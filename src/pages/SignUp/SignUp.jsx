@@ -1,5 +1,6 @@
-import { Link, Navigate } from "react-router-dom";
-import { TbEye } from "react-icons/tb";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+// import { TbEye } from "react-icons/tb";
 
 import Container from "../../components/common/Container";
 import { useContext, useState } from "react";
@@ -9,9 +10,13 @@ import axios from "axios";
 import "./SignUp.css";
 import { SignInDefault } from "../../components/common/SignInDefault";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
-  const { state } = useContext(AuthContext);
+  const { state, signInWithGoogle, user } = useContext(AuthContext);
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -26,8 +31,28 @@ const SignUp = () => {
       .then((res) => console.log("Data sended"));
   };
 
+  const handleSignInWithGoogle = () => {
+    signInWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        toast.success("Signin successful!", {
+          toastId: "Rahul Ali",
+        });
+        // console.log(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        // console.log(error.message);
+        setError(error.message);
+      });
+  };
+
   if (state.user) {
     return <Navigate to={"/account-settings"} />;
+  }
+
+  if (user) {
+    return <Navigate to={"/"} />;
   }
 
   // const handleSignUp = () => {
@@ -240,9 +265,12 @@ const SignUp = () => {
               Sign Up
             </button>
           </form>
+          <p style={{ color: "red", textAlign: "center", paddingTop: "5px" }}>
+            {error}
+          </p>
           <SignInDefault
-          // handleSignInWithGithub={handleSignInWithGithub}
-          // handleSignInWithGoogle={handleSignInWithGoogle}
+            // handleSignInWithGithub={handleSignInWithGithub}
+            handleSignInWithGoogle={handleSignInWithGoogle}
           />
           <div className="go__signup">
             <p className="newuser">

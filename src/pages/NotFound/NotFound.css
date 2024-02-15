@@ -1,0 +1,29 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+}
+
+.not-found img {
+  max-width: 100%;
+}
+
+.notfound__button {
+  text-align: center;
+}
+
+.notfound__button--btn {
+  padding: 8px 25px;
+  transition: all 0.3s;
+  border-radius: 5px;
+  font-weight: 600;
+
+  color: var(--primary-color);
+  border: 1px solid var(--hover-color);
+  background-color: var(--hover-color);
+  &:hover {
+    color: var(--hover-color);
+    background-color: var(--primary-color);
+  }
+}

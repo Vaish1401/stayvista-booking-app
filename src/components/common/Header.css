@@ -54,7 +54,7 @@ header.hide {
   border: 1px solid var(--hover-color);
   background-color: var(--hover-color);
   &:hover {
-    color: var(--parimary-secondary);
+    color: var(--hover-color);
     background-color: var(--primary-color);
   }
 }
