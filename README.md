@@ -1,14 +1,11 @@
 # Travel Vista - A Booking Site
 
-# Visit: [Travel Vista](https://booking-rahulfordev.netlify.app/)
-
 ## Technologies Used
 
 - **React**: A JavaScript library for building user interfaces.
 - **react-router-dom**: Declarative routing for React.js.
 - **react-date-range**: Date picker component for React.
 - **react-icons**: A collection of SVG icons for popular icon libraries.
-- **react-toastify**: A React notification library.
 - **Firebase**: A cloud-based platform for building web and mobile applications.
 
 ## Features
@@ -47,7 +44,3 @@ npm run dev
 ```
 
 Visit [http://localhost:5173/](http://localhost:5173/) to view the app in your browser.
-
-## Contributing
-
-If you'd like to contribute to this project, feel free to open issues and submit pull requests.
