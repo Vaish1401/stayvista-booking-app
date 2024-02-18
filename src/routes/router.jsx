@@ -13,6 +13,7 @@ import Personal from "../components/Personal/Personal";
 import PrivateRoutes from "./PrivateRoutes";
 import Hotels from "../pages/Hotels/Hotels";
 import NotFound from "../pages/NotFound/NotFound";
+import HotelDetails from "../pages/HotelDetails/HotelDetails";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,14 @@ const router = createBrowserRouter([
         element: <Airport />,
       },
       { path: "hotels", element: <Hotels /> },
+      {
+        path: "hotels/:hotelID",
+        element: <HotelDetails />,
+        loader: ({ params }) =>
+          fetch(
+            `https://rahulfordev-json-server.vercel.app/cardDatas/${params.hotelID}`
+          ),
+      },
     ],
   },
   {
