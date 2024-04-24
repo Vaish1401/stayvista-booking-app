@@ -66,9 +66,7 @@ const router = createBrowserRouter([
         path: "hotels/:hotelID",
         element: <HotelDetails />,
         loader: ({ params }) =>
-          fetch(
-            `https://rahulfordev-json-server.vercel.app/cardDatas/${params.hotelID}`
-          ),
+          fetch(`https://jobs-rvc2.onrender.com/cardDatas/${params.hotelID}`),
       },
     ],
   },

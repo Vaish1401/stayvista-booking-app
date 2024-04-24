@@ -23,7 +23,7 @@ const Hotels = () => {
   const [max, setMax] = useState(undefined);
 
   const { data, loading, error, reFetch } = useFetch(
-    `https://rahulfordev-json-server.vercel.app/cardDatas?city=${destination}`
+    `https://jobs-rvc2.onrender.com/cardDatas?city=${destination}`
   );
 
   const handleReSearch = () => {

@@ -52,6 +52,8 @@ const Header = () => {
       prevScrollPosition = curScrollPosition;
     });
   }
+
+  
   return (
     <header className="header-section" ref={headerEl}>
       <Container>
