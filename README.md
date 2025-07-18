@@ -1,4 +1,4 @@
-# Travel Vista - A Booking Site
+# StayVista - A Booking Site
 
 ## Technologies Used
 
@@ -16,31 +16,3 @@
    - **Sign Up**: Create a new account to access personalized features.
    - **Sign In**: Log in to your account for a customized experience.
 
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Rahulfordev/react-booking-website.git
-cd react-booking-website
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Configure Firebase:
-
-   - Create a Firebase project: [Firebase Console](https://console.firebase.google.com/).
-   - Obtain your Firebase configuration.
-   - Replace the Firebase configuration in the project (usually in `src/firebase/firebase.js`).
-
-4. Run the application:
-
-```bash
-npm run dev
-```
-
-Visit [http://localhost:5173/](http://localhost:5173/) to view the app in your browser.
