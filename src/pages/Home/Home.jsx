@@ -16,7 +16,7 @@ const Home = () => {
             <div className="home__content">
               <h1 className="home__section--title">Your jouney starts here</h1>
               <p className="home__section--desc">
-                Discover and book amazing travel experiences with Tripgo
+                Discover and book amazing travel experiences with StayVista !
               </p>
             </div>
             <SearchHotel />

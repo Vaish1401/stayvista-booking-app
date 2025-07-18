@@ -8,40 +8,44 @@ const Featured = () => {
       <Container>
         <Title
           head="Popular Destinations"
-          desc="An enim nullam tempor gravida donec enim congue magna at pretium."
+          desc="Discover some of the most loved destinations handpicked for your next perfect getaway. Whether you're seeking historic charm, coastal bliss, or mountain serenity — StayVista brings you the best stays across India."
         />
         <div className="featured">
           <div className="featuredItem">
             <img
-              src="https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/destination-8.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Taj-Mahal.jpg/640px-Taj-Mahal.jpg"
+
               alt=""
               className="featuredImg"
             />
             <div className="featuredTitles">
-              <h1>Viet Nam</h1>
+              <h1>Agra</h1>
               <button className="featured__button">Tours 01</button>
             </div>
           </div>
 
+
           <div className="featuredItem">
             <img
-              src="https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/destination-01.jpg"
+              src="https://images.unsplash.com/photo-1591888966529-3c33fef69b81?auto=format&fit=crop&w=800&q=80"
               alt=""
               className="featuredImg"
             />
             <div className="featuredTitles">
-              <h1>Europe</h1>
+              <h1>New Delhi</h1>
               <button className="featured__button">Tours 02</button>
             </div>
           </div>
+
+
           <div className="featuredItem">
             <img
-              src="https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/destination-03.jpg"
+              src="https://images.unsplash.com/photo-1616151342445-f735d53a902b?auto=format&fit=crop&w=800&q=80"
               alt=""
               className="featuredImg"
             />
             <div className="featuredTitles">
-              <h1>East Asia</h1>
+              <h1>Mumbai</h1>
               <button className="featured__button">Tours 03</button>
             </div>
           </div>

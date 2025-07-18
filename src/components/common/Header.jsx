@@ -59,7 +59,7 @@ const Header = () => {
       <Container>
         <nav className="header__content">
           <div className="header__logo">
-            <h2>Booking.com</h2>
+            <h2>StayVista</h2>
           </div>
           <div className="header__menu">
             <ul className="header__menu--links header__links">
@@ -119,7 +119,7 @@ const Header = () => {
         <nav className="responsive-header__content">
           <div className="responsive__nav-bar">
             <div className="responsive-header__logo">
-              <h2>Booking.com</h2>
+              <h2>StayVista</h2>
             </div>
             <div className="mobile__nav--items">
               <li

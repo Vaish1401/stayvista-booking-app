@@ -16,17 +16,14 @@ const Footer = () => {
       <div className="container">
         <div className="footer__container">
           <div className="footer__container--item">
-            <h2 className="logo foote__item--head">Booking.com</h2>
+            <h2 className="logo foote__item--head">StayVista</h2>
             <p className="footer__desc">
-              There are many variations of passages of Lorem <br /> the Ipsum
-              available but it is the majority of <br /> suffered that a
-              alteration in that some dummy <br /> text.
+              Your trusted platform for luxury homestays <br/>and villa rentals across India and around the world. <br/>Discover, book, and relax with us. <br /> 
             </p>
             <div className="footer-icons">
-              <FaXTwitter />
-              <FaFacebookF />
-              <FaInstagram />
-              <FaPinterest />
+              <a href="https://instagram.com/vaisshh.jpg" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#E1306C] transition duration-300">
+    <FaInstagram />
+  </a>
             </div>
           </div>
           <div className="footer__container--item">
@@ -64,7 +61,7 @@ const Footer = () => {
             <h5 className="foote__item--head">Contact Info</h5>
             <div className="footer__location--item">
               <a className="footer__location">
-                455 West Orchard Street Kings Mountain, NC 280867
+                Aligarh, Uttar Pradesh, 202001
               </a>
             </div>
             <div className="footer__contact">
@@ -73,7 +70,7 @@ const Footer = () => {
               </div>
               <ul className="contact__li">
                 <li>
-                  <Link>+088 (006) 992-99-10</Link>
+                  <Link>+91-9389975419</Link>
                 </li>
               </ul>
             </div>
@@ -83,7 +80,7 @@ const Footer = () => {
               </div>
               <ul className="contact__li">
                 <li>
-                  <Link>example@gmail.com</Link>
+                  <Link>vaishnavisingh1401@gmail.com</Link>
                 </li>
               </ul>
             </div>
@@ -91,7 +88,7 @@ const Footer = () => {
         </div>
         <div className="footer__sub-footer">
           <div className="copyright">
-            © {new Date().getFullYear()} Rahulfordev All Rights Reserved.
+            © {new Date().getFullYear()} Vaish All Rights Reserved.
           </div>
           <div className="footer__payment--mathod">
             <img src={visa} alt="visa-card" />

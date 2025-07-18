@@ -1,164 +1,52 @@
-{
-  "cardDatas": [
-    {
-      "id": 1,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2023/04/tour-hours-2-636x426.jpg",
-      "time": "2 hours",
-      "title": "Ecotourism Sabah sightseeing tours – 2 hours",
-      "location": "Sabah, Malaysia",
-      "price": 100,
-      "score": "9.8",
-      "city": "sabah"
-    },
-    {
-      "id": 2,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2023/04/tour-hours-1-636x426.jpg",
-      "time": "4 hours",
-      "title": "Copenhagen city Tours – 4 Hours",
-      "location": "Copenhagen, Denmark",
-      "price": 150,
-      "score": "7.4",
-      "city": "copenhagen"
-    },
-    {
-      "id": 3,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Copenhagen-636x426.jpg",
-      "time": "7 days",
-      "title": "Copenhagen to Helsinki – 7 Days",
-      "location": "Copenhagen, Denmark",
-      "price": 339,
-      "score": "8.5",
-      "city": "copenhagen"
-    },
-    {
-      "id": 4,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Netherlands-636x426.jpg",
-      "time": "3 days",
-      "title": "Amsterdam and Lake IJssel Cycle",
-      "location": "Amsterdam, Netherlands",
-      "price": 233,
-      "score": "9.2",
-      "city": "amsterdam"
-    },
-    {
-      "id": 5,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Hamburg-636x426.jpg",
-      "time": "3 days",
-      "title": "Miniatur Wunderland & Historic Port of Hamburg",
-      "location": "Hamburg, Germany",
-      "price": 222,
-      "score": "6.7",
-      "city": "hamburg"
-    },
-    {
-      "id": 6,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Tour-Russia-636x426.jpg",
-      "time": "5 days",
-      "title": "The Splendour of Saint Petersburg and Moscow",
-      "location": "Moscow, Russia",
-      "price": 280,
-      "score": "8.6",
-      "city": "moscow"
-    },
-    {
-      "id": 7,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/image-banner-home1-02-636x426.jpg",
-      "time": "5 days",
-      "title": "Tour of Caucasus Mountains – Self Guided",
-      "location": "2200 Encore Pkwy, Alpharetta, GA 30009, USA",
-      "price": 69,
-      "score": "7.8",
-      "city": "georgia"
-    },
-    {
-      "id": 8,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/tour-9-636x426.jpg",
-      "time": "9 days",
-      "title": "9-Day Beijing – Guilin and Shanghai Tour",
-      "location": "Beijing, China",
-      "price": 199,
-      "score": "7.2",
-      "city": "beijing"
-    },
-    {
-      "id": 9,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2023/04/tour-hours-2-636x426.jpg",
-      "time": "2 hours",
-      "title": "Ecotourism Sabah sightseeing tours – 2 hours",
-      "location": "Sabah, Malaysia",
-      "price": 50,
-      "score": "9.8",
-      "city": "sabah"
-    },
-    {
-      "id": 10,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2023/04/tour-hours-1-636x426.jpg",
-      "time": "4 hours",
-      "title": "Copenhagen city Tours – 4 Hours",
-      "location": "Copenhagen, Denmark",
-      "price": 80,
-      "score": "7.4",
-      "city": "copenhagen"
-    },
-    {
-      "id": 11,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Copenhagen-636x426.jpg",
-      "time": "7 days",
-      "title": "Copenhagen to Helsinki – 7 Days",
-      "location": "Copenhagen, Denmark",
-      "price": 180,
-      "score": "8.5",
-      "city": "copenhagen"
-    },
-    {
-      "id": 12,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Netherlands-636x426.jpg",
-      "time": "3 days",
-      "title": "Amsterdam and Lake IJssel Cycle",
-      "location": "Amsterdam, Netherlands",
-      "price": 120,
-      "score": "9.2",
-      "city": "amsterdam"
-    },
-    {
-      "id": 13,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Hamburg-636x426.jpg",
-      "time": "3 days",
-      "title": "Miniatur Wunderland & Historic Port of Hamburg",
-      "location": "Hamburg, Germany",
-      "price": 110,
-      "score": "6.7",
-      "city": "hamburg"
-    },
-    {
-      "id": 14,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/08/Tour-Russia-636x426.jpg",
-      "time": "5 days",
-      "title": "The Splendour of Saint Petersburg and Moscow",
-      "location": "Moscow, Russia",
-      "price": 140,
-      "score": "8.6",
-      "city": "moscow"
-    },
-    {
-      "id": 15,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/image-banner-home1-02-636x426.jpg",
-      "time": "5 days",
-      "title": "Tour of Caucasus Mountains – Self Guided",
-      "location": "2200 Encore Pkwy, Alpharetta, GA 30009, USA",
-      "price": 30,
-      "score": "7.8",
-      "city": "georgia"
-    },
-    {
-      "id": 16,
-      "image": "https://demo.ovatheme.com/tripgo/wp-content/uploads/2022/07/tour-9-636x426.jpg",
-      "time": "9 days",
-      "title": "9-Day Beijing – Guilin and Shanghai Tour",
-      "location": "Beijing, China",
-      "price": 99,
-      "score": "7.2",
-      "city": "beijing"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "image": "https://images.unsplash.com/photo-1613545325378-5dbb1dcf80a1",
+    "time": "3 days",
+    "title": "Luxury Palace Stay in Udaipur",
+    "location": "Udaipur, Rajasthan",
+    "price": 299,
+    "score": "9.5",
+    "city": "udaipur"
+  },
+  {
+    "id": 2,
+    "image": "https://images.unsplash.com/photo-1559589689-577aabd1b82e",
+    "time": "2 nights",
+    "title": "Backwater Houseboat Experience",
+    "location": "Alleppey, Kerala",
+    "price": 199,
+    "score": "8.9",
+    "city": "alleppey"
+  },
+  {
+    "id": 3,
+    "image": "https://images.unsplash.com/photo-1617806110780-3789c0cb59b6",
+    "time": "4 nights",
+    "title": "Himalayan View Retreat",
+    "location": "Manali, Himachal Pradesh",
+    "price": 179,
+    "score": "9.2",
+    "city": "manali"
+  },
+  {
+    "id": 4,
+    "image": "https://images.unsplash.com/photo-1620401309458-e620760d3556",
+    "time": "5 nights",
+    "title": "Goa Beachside Resort",
+    "location": "Calangute, Goa",
+    "price": 250,
+    "score": "8.7",
+    "city": "goa"
+  },
+  {
+    "id": 5,
+    "image": "https://images.unsplash.com/photo-1620527981087-691cccf75279",
+    "time": "2 nights",
+    "title": "Coffee Estate Bungalow",
+    "location": "Coorg, Karnataka",
+    "price": 180,
+    "score": "8.3",
+    "city": "coorg"
+  }
+]
